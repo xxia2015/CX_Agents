@@ -1,0 +1,322 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Default Start Flow",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "phone_plan.travel_plan_add",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Travel Plan",
+    "name": "b7f52083-335b-4f96-89a3-3b24d93544f9"
+  }, {
+    "intent": "phone_plan.cruise_plan_add",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Cruise Plan",
+    "name": "27fede9d-260a-457d-8267-d24cad392ecf"
+  }, {
+    "intent": "small_talk.thanks",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You're very welcome!", "No problem!", "Of course!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "d0909ad0-e415-43c9-ba7f-70e24545625c"
+  }, {
+    "intent": "small_talk.goodbye",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thanks for contacting us! Have a great day!", "Thanks for contacting us! Have a wonderful day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "3a7df9bc-57c0-4037-91f7-96790f150b8b"
+  }, {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hi! I'm the virtual telecommunications agent. I can help you resolve billing and plan questions, troubleshoot, and add travel and cruise plans. How can I assist you today?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "09faddc0-8dec-4a76-af6c-fc0f750e5d42"
+  }, {
+    "intent": "small_talk.agent_redirect",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure thing.", "No problem!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "d16c8703-e923-43a2-8760-8156fa34c8b4"
+  }, {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure, let me know when you're ready." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3a2d428a-bc73-415f-b6e8-45d802102c84"
+  }, {
+    "intent": "bill_reduction.initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "discount",
+        "value": "false"
+      }, {
+        "parameter": "save_bill",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Bill Reduction",
+    "name": "e78e25ae-9587-4103-960c-bd1490a715a4"
+  }, {
+    "intent": "troubleshoot.router_issue",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "router_issue",
+        "value": "true"
+      }, {
+        "parameter": "outage_issue",
+        "value": "false"
+      }, {
+        "parameter": "password_change",
+        "value": "false"
+      }, {
+        "parameter": "router_placement",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Troubleshoot ",
+    "name": "b57b8a40-ab36-44fc-9bc4-8891b79bfdba"
+  }, {
+    "intent": "troubleshoot.outage_issue",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "outage_issue",
+        "value": "true"
+      }, {
+        "parameter": "router_issue",
+        "value": "false"
+      }, {
+        "parameter": "router_placement",
+        "value": "false"
+      }, {
+        "parameter": "password_change",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Troubleshoot ",
+    "name": "ba846304-bd23-4402-a953-35682dd5c971"
+  }, {
+    "intent": "troubleshoot.password_change",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "password_change",
+        "value": "true"
+      }, {
+        "parameter": "router_placement",
+        "value": "false"
+      }, {
+        "parameter": "outage_issue",
+        "value": "false"
+      }, {
+        "parameter": "router_issue",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Troubleshoot ",
+    "name": "17f9a4c4-6e8f-4550-a454-917898e7fca8"
+  }, {
+    "intent": "faq.support_bot",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I can help you resolve billing and plan questions, troubleshoot, and add travel and cruise plans. How can I assist you today? " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3cbf1827-5573-4ded-8eb0-0f420f0d1b33"
+  }, {
+    "intent": "faq.bill_reduction.bill_type",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I can help you investigate discrepancies in your current and previous TV, internet, and phone bills. How can I assist you today? " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "c01e66fe-4b8b-440e-b283-6f13164c9ab2"
+  }, {
+    "intent": "faq.troubleshoot.service_type",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I can help you understand current outages, restart routers, change WiFi passwords, and determine optimal router placement. How can I assist you today? " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "fbb5f401-fdb4-43c9-8fcb-60fb4fcd3dfd"
+  }, {
+    "intent": "bill_reduction.save_bill",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "save_bill",
+        "value": "true"
+      } ]
+    },
+    "targetFlow": "Bill Reduction",
+    "name": "311357d7-320b-4865-8e94-b3070327be11"
+  }, {
+    "intent": "troubleshoot.router_placement",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "router_placement",
+        "value": "true"
+      }, {
+        "parameter": "password_change",
+        "value": "false"
+      }, {
+        "parameter": "router_issue",
+        "value": "false"
+      }, {
+        "parameter": "outage_issue",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Troubleshoot ",
+    "name": "00761a88-46f2-47a9-9920-c2cfd3ec1517"
+  }, {
+    "intent": "phone_plan.new_line_add",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "newline",
+        "value": "true"
+      }, {
+        "parameter": "unlimited",
+        "value": "false"
+      }, {
+        "parameter": "dataupgrade",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Plan Questions",
+    "name": "348f0127-5ca7-4e83-b2cd-cd84a25e8ca7"
+  }, {
+    "intent": "phone_plan.unlimited_plans",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "unlimited",
+        "value": "true"
+      }, {
+        "parameter": "dataupgrade",
+        "value": "false"
+      }, {
+        "parameter": "newline",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Plan Questions",
+    "name": "33c747c9-71c2-4fd4-9a65-71a402c63b9b"
+  }, {
+    "intent": "phone_plan.upgrade_data",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "dataupgrade",
+        "value": "true"
+      }, {
+        "parameter": "newline",
+        "value": "false"
+      }, {
+        "parameter": "unlimited",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Plan Questions",
+    "name": "ce6d70ec-3748-4376-87f3-41d84e3a59a1"
+  }, {
+    "intent": "faq.plan_questions",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You can upgrade your plan by adding a new line, increasing your data limits, or switching to unlimited data plans. What can I help you with today?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "a74cea76-8a82-4a1c-8fb3-700f681bde7c"
+  }, {
+    "intent": "faq.plan.current_plan",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "current_plan",
+        "value": "true"
+      } ]
+    },
+    "targetFlow": "Plan Questions",
+    "name": "847eec5a-ba96-4ea9-a4bb-5468d1602d67"
+  }, {
+    "intent": "phone_plan.general_plan_question",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure, I can help you modify your existing plan. Would you like to upgrade your plan or add an unlimited plan?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "bb5558a7-7894-4cb9-9594-e99664026806"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "bc6bd119-ae20-4542-aa4c-00993ac82155"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "805d64d0-9580-41ad-8f66-0bfc6858e316"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  }
+}

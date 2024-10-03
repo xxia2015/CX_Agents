@@ -1,0 +1,81 @@
+{
+  "name": "8414118d-dea3-4f12-b5fa-41315b615644",
+  "displayName": "Troubleshoot",
+  "transitionRoutes": [ {
+    "intent": "troubleshoot.outage_issue",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "outage_issue",
+        "value": "true"
+      }, {
+        "parameter": "password_change",
+        "value": "false"
+      }, {
+        "parameter": "router_issue",
+        "value": "false"
+      }, {
+        "parameter": "router_placement",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Troubleshoot ",
+    "name": "93b48fd1-07a6-4d46-9cb4-6cd83ad1c2e8"
+  }, {
+    "intent": "troubleshoot.password_change",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "password_change",
+        "value": "true"
+      }, {
+        "parameter": "router_placement",
+        "value": "false"
+      }, {
+        "parameter": "outage_issue",
+        "value": "false"
+      }, {
+        "parameter": "router_issue",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Troubleshoot ",
+    "name": "79f6965d-ebee-43e9-9def-c5c0f72cc2d3"
+  }, {
+    "intent": "troubleshoot.router_placement",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "router_placement",
+        "value": "true"
+      }, {
+        "parameter": "router_issue",
+        "value": "false"
+      }, {
+        "parameter": "outage_issue",
+        "value": "false"
+      }, {
+        "parameter": "password_change",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Troubleshoot ",
+    "name": "6010b879-498c-483f-a720-cec69914618c"
+  }, {
+    "intent": "troubleshoot.router_issue",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "router_issue",
+        "value": "true"
+      }, {
+        "parameter": "outage_issue",
+        "value": "false"
+      }, {
+        "parameter": "router_placement",
+        "value": "false"
+      }, {
+        "parameter": "password_change",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Troubleshoot ",
+    "name": "013f1c7d-3603-44a7-baec-387614aeb0d3"
+  } ]
+}

@@ -1,0 +1,56 @@
+{
+  "name": "4fd5c2ba-363b-44af-b21b-f91f81381ebe",
+  "displayName": "Collect Customer Line",
+  "form": {
+    "parameters": [ {
+      "displayName": "phone_number",
+      "required": true,
+      "entityType": "@sys.phone-number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Let me take a look for you. What is your phone number with us?" ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn't get that. Could you please enter a valid phone number?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "cd91caca-81fc-4e13-9d85-f95563231ff9"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am sorry. I don't understand.  Please provide a valid phone number" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "944a1b86-2bee-4f30-b891-9e8af5b9b2db"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+      "webhook": "cxPrebuiltAgentsTelecom",
+      "tag": "validatePhoneLine"
+    },
+    "targetPage": "Validate Line",
+    "name": "5f36be55-0000-210f-859a-f403043d09f0"
+  } ]
+}

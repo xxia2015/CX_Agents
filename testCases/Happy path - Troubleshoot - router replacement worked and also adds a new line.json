@@ -1,0 +1,289 @@
+{
+  "name": "cb88fc98-7203-4972-97bd-047543660f7a",
+  "tags": [ "#wifi_replacement_worked", "#new_line" ],
+  "displayName": "Happy path - Troubleshoot - router replacement worked and also adds a new line",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hello"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi! I'm the virtual telecommunications agent. I can help you resolve billing and plan questions, troubleshoot, and add travel and cruise plans. How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I'd like to know more about router replacement"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "outage_issue": "false",
+        "password_change": "false",
+        "router_issue": "false",
+        "router_placement": "true"
+      },
+      "triggeredIntent": {
+        "name": "troubleshoot.router_placement"
+      },
+      "currentPage": {
+        "name": "Confirm Service - Yes",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Sure, Let me help you with that." ]
+      }, {
+        "text": [ "Please follow these guidelines for optimal router placements.\n1. Make sure your router is away from other electronic devices.\n2. Routers tend to spread signal downward, so it's best to mount the router as high as possible to maximize coverage.\n3. Routers send the signal out in all directions, so it’s better if you install it in a central location. Did that resolve the issue?\n" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes!"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "outage_issue": "false",
+        "password_change": "false",
+        "router_issue": "false",
+        "router_placement": "true"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "I'm glad it helped." ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I was wondering how much more I would need to pay if I added another mobile line to our plan."
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "newline": "true",
+        "outage_issue": "false",
+        "password_change": "false",
+        "router_issue": "false",
+        "router_placement": "true"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.new_line_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1231231234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "newline": "true",
+        "outage_issue": "false",
+        "password_change": "false",
+        "phone_number": "1231231234",
+        "router_issue": "false",
+        "router_placement": "true"
+      },
+      "currentPage": {
+        "name": "New line Info",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. If I were to add another line to your plan with all of the same access and limits, your total cost would come out to $100 plus tax. This is a $15 increase. Would you like to add that line?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "and that's per month right?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "newline": "true",
+        "outage_issue": "false",
+        "password_change": "false",
+        "phone_number": "1231231234",
+        "router_issue": "false",
+        "router_placement": "true"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.charge_type"
+      },
+      "currentPage": {
+        "name": "New line Info",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "The $15 increase is a monthly charge. Would you like to add that line?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "newline": "true",
+        "outage_issue": "false",
+        "password_change": "false",
+        "phone_number": "1231231234",
+        "router_issue": "false",
+        "router_placement": "true"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Great. I've added a new line with the phone number XXX-XXX-XXXX to your account. You will receive an email shortly with all the updated details." ]
+      }, {
+        "text": [ "Is there anything else I can help you with today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks!"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "newline": "true",
+        "outage_issue": "false",
+        "password_change": "false",
+        "phone_number": "1231231234",
+        "router_issue": "false",
+        "router_placement": "true"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "small_talk.thanks"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "No problem!" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607625954,
+    "nanos": 526252000
+  }
+}

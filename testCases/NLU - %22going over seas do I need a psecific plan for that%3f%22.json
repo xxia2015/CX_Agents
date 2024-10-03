@@ -1,0 +1,37 @@
+{
+  "name": "fed8e773-c858-49ac-8149-696a77d0908b",
+  "tags": [ "#nlu_travel_plan" ],
+  "displayName": "NLU - \"going over seas do I need a psecific plan for that?\"",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "going over seas do I need a psecific plan for that?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "phone_plan.travel_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+      }, {
+        "text": [ "Can I get the last four digits of the phone line you'll be taking with you?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606688030,
+    "nanos": 853135000
+  }
+}

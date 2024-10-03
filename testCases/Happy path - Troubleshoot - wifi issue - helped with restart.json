@@ -1,0 +1,153 @@
+{
+  "name": "c64ea9fd-544a-44db-bf0f-193ecccdc526",
+  "tags": [ "#wifi_restart_worked" ],
+  "displayName": "Happy path - Troubleshoot - wifi issue - helped with restart",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "wifi is currently not working for me"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_issue": "true"
+      },
+      "triggeredIntent": {
+        "name": "troubleshoot.router_issue"
+      },
+      "currentPage": {
+        "name": "Collect Zip Code",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "I’m sorry to hear that. Can you please tell me your current zip code so that I can help you with the problem?" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "99999"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_issue": "true",
+        "zip_code": "99999"
+      },
+      "currentPage": {
+        "name": "Power Outage - No",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Looks like there are no outages in the area. I can help with restarting your router. Do you want to give it a try?" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes please"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_issue": "true",
+        "zip_code": "99999"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Router Reset",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Please find your router and press on the restart button for at least 20 seconds. You will lose your connection completely for a few minutes. Let me know if it helped!" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes it worked thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_issue": "true",
+        "zip_code": "99999"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Perfect, I’m glad I could help. " ]
+      }, {
+        "text": [ "Is there anything I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_issue": "true",
+        "zip_code": "99999"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Okay, have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606864685,
+    "nanos": 275708000
+  }
+}

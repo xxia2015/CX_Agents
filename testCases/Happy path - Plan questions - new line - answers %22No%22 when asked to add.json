@@ -1,0 +1,149 @@
+{
+  "name": "f444ff6f-542d-487f-a7ea-2bd1ca3c5cfb",
+  "tags": [ "#new_line" ],
+  "displayName": "Happy path - Plan questions - new line - answers \"No\" when asked to add",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi! I'm the virtual telecommunications agent. I can help you resolve billing and plan questions, troubleshoot, and add travel and cruise plans. How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "want to add a new line"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "newline": "true"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.new_line_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "555-555-5555"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "newline": "true",
+        "phone_number": "5555555555"
+      },
+      "currentPage": {
+        "name": "New line Info",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. If I were to add another line to your plan with all of the same access and limits, your total plan would come out to $100 plus tax. This is a $15 increase. Would you like to add that line?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no not right nmow thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "newline": "true",
+        "phone_number": "5555555555"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Sure thing!" ]
+      }, {
+        "text": [ "Is there anything else I can help you with today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no im good"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "newline": "true",
+        "phone_number": "5555555555"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606776729,
+    "nanos": 565525000
+  }
+}

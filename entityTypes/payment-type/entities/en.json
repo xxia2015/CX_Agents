@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "recurring",
+    "synonyms": [ "recurring" ],
+    "languageCode": "en"
+  }, {
+    "value": "one time",
+    "synonyms": [ "one-time", "one time", "one" ],
+    "languageCode": "en"
+  } ]
+}

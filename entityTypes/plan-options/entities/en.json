@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "Option 2",
+    "synonyms": [ "100", "the hundred dollar one", "hundred dollars", "hundred", "100 dollars", "the one with data", "talk text and data package", "option two", "second option", "second one", "second", "option 2", "with data", "2" ],
+    "languageCode": "en"
+  }, {
+    "value": "Option 1",
+    "synonyms": [ "50", "the fifty dollar one", "50 dollars", "fifty dollars", "fifty", "the cheaper one", "the one without data", "first one", "option one", "first", "first option", "option 1", "$50", "1" ],
+    "languageCode": "en"
+  } ]
+}

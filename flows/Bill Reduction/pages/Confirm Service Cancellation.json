@@ -1,0 +1,23 @@
+{
+  "name": "8a726430-2fff-494c-8492-cd3bc8075a75",
+  "displayName": "Confirm Service Cancellation",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Ok, your new bill will be $$session.params.bill_without_purchase starting next month. " ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Anything else?",
+    "name": "fb6baef1-7bcb-4ba1-a9b9-11cf5d140bfa"
+  } ]
+}

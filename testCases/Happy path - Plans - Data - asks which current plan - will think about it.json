@@ -1,0 +1,163 @@
+{
+  "name": "baa0410e-f638-4065-87ef-5e4ba88c6b9a",
+  "tags": [ "#data_think_about_it" ],
+  "displayName": "Happy path - Plans - Data - asks which current plan - will think about it",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "need to increase my data usage"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "dataupgrade": "true"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.upgrade_data"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "123 123 1234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "dataupgrade": "true",
+        "phone_number": "1231231234"
+      },
+      "currentPage": {
+        "name": "Data Usage Info",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, let me pull up the available data plans for you." ]
+      }, {
+        "text": [ "You can choose one of 2 available plans:" ]
+      }, {
+        "text": [ "Option 1 includes XXX Internet service tier at $[XXX] per month, for which you will receive a monthly plan that includes 1.2 TB of data" ]
+      }, {
+        "text": [ "Option 2  includes XXX Internet service tier at $[XXX] per month, for which you will receive a monthly plan that includes 2.4 TB of data" ]
+      }, {
+        "text": [ "Which data plan would you like to upgrade to?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "which plan do I currently have"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "dataupgrade": "true",
+        "phone_number": "1231231234"
+      },
+      "triggeredIntent": {
+        "name": "faq.plan.current_plan"
+      },
+      "currentPage": {
+        "name": "Data Usage Info",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Your current data plan is XXX Internet service tier which includes XX TB of data per month." ]
+      }, {
+        "text": [ "Which data plan would you like to upgrade to?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "let me think about it"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "dataupgrade": "true",
+        "phone_number": "1231231234"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.wait"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. I will not upgrade your data plan." ]
+      }, {
+        "text": [ "Is there anything else I can help you with today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "dataupgrade": "true",
+        "phone_number": "1231231234"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606782027,
+    "nanos": 360044000
+  }
+}

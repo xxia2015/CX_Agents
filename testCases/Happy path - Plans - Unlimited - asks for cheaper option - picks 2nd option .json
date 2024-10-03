@@ -1,0 +1,164 @@
+{
+  "name": "c387adc6-ad3d-498c-98a0-48fe50bc2e49",
+  "tags": [ "#unlimited_option_2" ],
+  "displayName": "Happy path - Plans - Unlimited - asks for cheaper option - picks 2nd option ",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I want to get the unlimited plan"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "unlimited": "true"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.unlimited_plans"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1234567891"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "phone_number": "1234567891",
+        "unlimited": "true"
+      },
+      "currentPage": {
+        "name": "Unlimited Plans Info",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, let me pull up the available unlimited plans for you." ]
+      }, {
+        "text": [ "You can choose one of 2 available plans:" ]
+      }, {
+        "text": [ "Option 1 includes talk, text and data. Three-line unlimited plans start at $[XXX] per month, with the XXX Unlimited plan. More info here [URL]." ]
+      }, {
+        "text": [ "Option 2 includes talk, text and data. Atleast two lines, start at $[XXX] per month, with the XXX Unlimited plan. More info here [URL]." ]
+      }, {
+        "text": [ "Which unlimited plan would you like to add?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "do you have any cheaper options than that?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "phone_number": "1234567891",
+        "unlimited": "true"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.cheaper_plan_options"
+      },
+      "currentPage": {
+        "name": "Unlimited Plans Info",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "The cheapest unlimited plan is Option 1, which has a three-line unlimited plan for only $XX. To add it, you can simply say \"Option 1\"." ]
+      }, {
+        "text": [ "Which unlimited plan would you like to add?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "alright I take the second one"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "phone_number": "1234567891",
+        "unlimited": "true",
+        "unlimited_plan": "Option 2"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. " ]
+      }, {
+        "text": [ "I've added that plan to your account." ]
+      }, {
+        "text": [ "Is there anything else I can help you with today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "phone_number": "1234567891",
+        "unlimited": "true",
+        "unlimited_plan": "Option 2"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606779575,
+    "nanos": 457997000
+  }
+}

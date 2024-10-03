@@ -1,0 +1,89 @@
+{
+  "name": "13dc0c7c-4e6c-4be2-a352-3ff2bde179b4",
+  "tags": [ "#agent_redirect" ],
+  "displayName": "Agent redirect - Start page",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi! I'm the virtual phone plan agent. I can help you add travel and cruise packages to your phone plan. How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Ugh. Please pass me to a human"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "small_talk.agent_redirect"
+      },
+      "currentPage": {
+        "name": "Speak to an Agent",
+        "flow": "Speak to an Agent"
+      },
+      "textResponses": [ {
+        "text": [ "Sure thing." ]
+      }, {
+        "text": [ "I will connect you to an agent. " ]
+      }, {
+        "text": [ "Before I transfer you, did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Speak to an Agent"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "No"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Speak to an Agent"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. Please wait while I connect you to an agent." ]
+      } ],
+      "currentFlow": {
+        "name": "Speak to an Agent"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1605805039,
+    "nanos": 217000000
+  }
+}

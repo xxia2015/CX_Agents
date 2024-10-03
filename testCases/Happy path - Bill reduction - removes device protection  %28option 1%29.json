@@ -1,0 +1,169 @@
+{
+  "name": "e31af744-669f-4805-bd92-de83f98356d2",
+  "tags": [ "#cancel_device_protection_yes" ],
+  "displayName": "Happy path - Bill reduction - removes device protection  (option 1)",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "can i reduce my bill somehow"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "save_bill": "true"
+      },
+      "triggeredIntent": {
+        "name": "bill_reduction.save_bill"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1111111111"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "phone_number": "1111111111",
+        "save_bill": "true"
+      },
+      "currentPage": {
+        "name": "Check Bill Saver",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Sure. We have two options for you. " ]
+      }, {
+        "text": [ "Option 1 where we can disconnect device protection, which was added to your plan when signing on. " ]
+      }, {
+        "text": [ "Option 2  would be to add the cheapest available plan so that your bill will be reduced by $XX per month. " ]
+      }, {
+        "text": [ "Which option would you like to pursue?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "option 1 please"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "phone_number": "1111111111",
+        "save_bill": "true",
+        "save_bill_option": "Option 1"
+      },
+      "currentPage": {
+        "name": "Reprompt Service Cancellation",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "You wish to cancel the device protection that your plan uses.\nCan you confirm again?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "discount": "false",
+        "phone_number": "1111111111",
+        "save_bill": "true",
+        "save_bill_option": "Option 1"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Ok, your new bill will be $54.34 starting next month. " ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks!"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "discount": "false",
+        "phone_number": "1111111111",
+        "save_bill": "true",
+        "save_bill_option": "Option 1"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607538900,
+    "nanos": 521962000
+  }
+}

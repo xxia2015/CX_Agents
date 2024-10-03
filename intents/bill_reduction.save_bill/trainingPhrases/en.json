@@ -1,0 +1,335 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Are there any "
+    }, {
+      "text": "offers",
+      "parameterId": "discount"
+    }, {
+      "text": " running?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Are there any special "
+    }, {
+      "text": "promotions",
+      "parameterId": "discount"
+    }, {
+      "text": " to help me reduce my monthly bill amount?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "do you have any "
+    }, {
+      "text": "discount",
+      "parameterId": "discount"
+    }, {
+      "text": " plans?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Are there any "
+    }, {
+      "text": "discounts",
+      "parameterId": "discount"
+    }, {
+      "text": " or new plans I can take advantage of to lower my bill amount?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Do you have any "
+    }, {
+      "text": "discount",
+      "parameterId": "discount"
+    }, {
+      "text": " plans for thanksgiving?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Are there any upcoming "
+    }, {
+      "text": "promotions",
+      "parameterId": "discount"
+    }, {
+      "text": " for existing customers?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I've been a loyal customer for several years now. Can I get a "
+    }, {
+      "text": "discount",
+      "parameterId": "discount"
+    }, {
+      "text": " starting the next billing cycle?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Do you have any "
+    }, {
+      "text": "promotions",
+      "parameterId": "discount"
+    }, {
+      "text": " for christmas/ new year specifically for existing customers?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is there any "
+    }, {
+      "text": "deal",
+      "parameterId": "discount"
+    }, {
+      "text": " to reduce my bill?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Am I eligible for any "
+    }, {
+      "text": "promotional",
+      "parameterId": "discount"
+    }, {
+      "text": " offer?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I get a better "
+    }, {
+      "text": "discount",
+      "parameterId": "discount"
+    }, {
+      "text": " plan?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Are "
+    }, {
+      "text": "Discount",
+      "parameterId": "discount"
+    }, {
+      "text": " plans available?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Discount",
+      "parameterId": "discount"
+    }, {
+      "text": " available?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Free "
+    }, {
+      "text": "promotion",
+      "parameterId": "discount"
+    }, {
+      "text": " available?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Will the "
+    }, {
+      "text": "discount",
+      "parameterId": "discount"
+    }, {
+      "text": " be given?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I avail the "
+    }, {
+      "text": "discount",
+      "parameterId": "discount"
+    }, {
+      "text": " plan?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please save money.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I have no money right now. Please reduce my bill."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What are the ways I can reduce my bill?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Lower my bill."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Save money on my bills."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Reduce my bill."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Let me know the best way to reduce my bills."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Help me in reducing my bills."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you help me in saving money on my bills?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Help me in saving money on my bills."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to cut down my monthly bill."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please help me find a way to reduce my bill."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is there a way to lower my bill?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to save money on my monthly plan."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "My monthly bill is high. I want to reduce it."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How can I lower my bill?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I think I no longer need all the services. Can I reduce my bill by adjusting my service options?"
+    } ],
+    "repeatCount": 3,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I lost my job and can’t pay the full bill. Can you help  reduce the bill amount for some time?"
+    } ],
+    "repeatCount": 3,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am financially impacted due to Covid. Is there a way I could reduce my bill for some time?"
+    } ],
+    "repeatCount": 3,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I wish to change my plan and get a lower bill each month?"
+    } ],
+    "repeatCount": 3,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Are there any best practices that help me reduce my bill?"
+    } ],
+    "repeatCount": 3,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Could you help me find ways to reduce my bill amount?"
+    } ],
+    "repeatCount": 3,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How do I reduce my bill amount?"
+    } ],
+    "repeatCount": 5,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "What can I do to reduce my bill amount?"
+    } ],
+    "repeatCount": 5,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How can I save money on my Bill?"
+    } ],
+    "repeatCount": 3,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How can I save money on my\r bill?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

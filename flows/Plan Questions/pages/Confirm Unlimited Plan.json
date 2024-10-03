@@ -1,0 +1,28 @@
+{
+  "name": "3fa5c0f5-8267-4ce2-9a05-b687ac22d0d5",
+  "displayName": "Confirm Unlimited Plan",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Got it. " ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "I've added that plan to your account." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Anything else?",
+    "name": "be3838f0-d1e5-4c7f-afb7-728f54b2802a"
+  } ]
+}

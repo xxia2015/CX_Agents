@@ -1,0 +1,198 @@
+{
+  "name": "4cc31452-759b-4216-8440-27d595bb024f",
+  "tags": [ "#current_bill", "#film_purchase" ],
+  "displayName": "Happy path - Bill reduction - movie purchase - asks if a one-time charge",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "My  bill increased by $15 and I can’t seem to figure out why."
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_amount": {
+          "amount": 15,
+          "currency": "USD",
+          "original": "$15"
+        }
+      },
+      "triggeredIntent": {
+        "name": "bill_reduction.initiate"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1234567891"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_amount": {
+          "amount": 15,
+          "currency": "USD",
+          "original": "$15"
+        },
+        "phone_number": "1234567891"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "To confirm, would you like to discuss your current bill or a previous bill?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "my most recent bill"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_amount": {
+          "amount": 15,
+          "currency": "USD",
+          "original": "$15"
+        },
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "currency": "USD",
+        "first_month": "December 01, 2020",
+        "phone_number": "1234567891",
+        "purchase": "The Godfather",
+        "purchase_amount": 15,
+        "total_bill": 69.340000000000003
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Ok, your current bill.\nAlright, I can check your bill and see what might have caused the discrepancy.\nOn  December 01, 2020, it looks like \"The Godfather\" was purchased for a sum of  15 USD." ]
+      }, {
+        "text": [ "Did you want to ask anything else?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "oh so  that is just  a one time charge?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_amount": {
+          "amount": 15,
+          "currency": "USD",
+          "original": "$15"
+        },
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "currency": "USD",
+        "first_month": "December 01, 2020",
+        "payment_type": [ "one time" ],
+        "phone_number": "1234567891",
+        "purchase": "The Godfather",
+        "purchase_amount": 15,
+        "total_bill": 69.340000000000003
+      },
+      "triggeredIntent": {
+        "name": "bill_reduction.paymentcharge_type"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Your purchase of \"The Godfather\" is a one time charge. I’m happy to help if you have any other questions. " ]
+      }, {
+        "text": [ "What else can I help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I'm good now thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_amount": {
+          "amount": 15,
+          "currency": "USD",
+          "original": "$15"
+        },
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "currency": "USD",
+        "first_month": "December 01, 2020",
+        "payment_type": [ "one time" ],
+        "phone_number": "1234567891",
+        "purchase": "The Godfather",
+        "purchase_amount": 15,
+        "total_bill": 69.340000000000003
+      },
+      "triggeredIntent": {
+        "name": "small_talk.thanks"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606950645,
+    "nanos": 253560000
+  }
+}

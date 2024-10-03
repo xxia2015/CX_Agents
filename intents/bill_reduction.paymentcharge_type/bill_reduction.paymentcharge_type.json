@@ -1,0 +1,11 @@
+{
+  "name": "c5cdb19b-a24e-4dec-89a9-de10ae6cca24",
+  "displayName": "bill_reduction.paymentcharge_type",
+  "parameters": [ {
+    "id": "payment_type",
+    "entityType": "@payment-type",
+    "isList": true
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 27
+}

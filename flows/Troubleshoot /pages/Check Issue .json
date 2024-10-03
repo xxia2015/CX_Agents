@@ -1,0 +1,41 @@
+{
+  "name": "8410619b-ef8a-46a8-b9b3-2da1278355e6",
+  "displayName": "Check Issue ",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.router_placement = \"true\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure, Let me help you with that." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Router Placement",
+    "name": "84b8460a-b925-48b2-a7a5-6cc7ee192f56"
+  }, {
+    "condition": "$session.params.password_change = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect Phone Number",
+    "name": "77266a37-9ce2-4ca9-a09f-f19f0a33c090"
+  }, {
+    "condition": "$session.params.outage_issue = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect Zip Code",
+    "name": "387ffea7-7c64-4431-936d-bf92442591fe"
+  }, {
+    "condition": "$session.params.router_issue = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect Zip Code",
+    "name": "7af92913-a971-4a2d-a7ed-69ab6e5346a0"
+  } ]
+}

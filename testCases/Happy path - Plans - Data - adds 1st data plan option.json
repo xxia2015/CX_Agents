@@ -1,0 +1,182 @@
+{
+  "name": "3b99d964-317b-4eb3-a23d-a1f2817d5767",
+  "displayName": "Happy path - Plans - Data - adds 1st data plan option",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hello"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi! I'm the virtual telecommunications agent. I can help you resolve billing and plan questions, troubleshoot, and add travel and cruise plans. How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "upgrade my data plan please"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "dataupgrade": "true"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.upgrade_data"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "555-555-5555"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "dataupgrade": "true",
+        "phone_number": "5555555555"
+      },
+      "currentPage": {
+        "name": "Data Usage Info",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, let me pull up the available data plans for you." ]
+      }, {
+        "text": [ "You can choose one of 2 available plans:" ]
+      }, {
+        "text": [ "Option 1 includes XX Internet service tier at $[XX] per month, for which you will receive a monthly plan that includes 1.2 TB of data" ]
+      }, {
+        "text": [ "Option 2  includes XX Internet service tier at $[XX] per month, for which you will receive a monthly plan that includes 2.4 TB of data" ]
+      }, {
+        "text": [ "Which data plan would you like to upgrade to?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "the first option thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "dataupgrade": "true",
+        "phone_number": "5555555555",
+        "upgrade_data": "Option 1"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. " ]
+      }, {
+        "text": [ "I've upgraded your data plan to XX. Your new bill will be $XX/month." ]
+      }, {
+        "text": [ "Is there anything else I can help you with today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "dataupgrade": "true",
+        "phone_number": "5555555555",
+        "upgrade_data": "Option 1"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "small_talk.thanks"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Of course!" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606847670,
+    "nanos": 762717000
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "name": "0dba947a-6534-44a7-b7ac-ca81aeda0f23",
+  "tags": [ "#agent_redirect", "#number_not_found" ],
+  "displayName": "Agent redirect - Cruise - number not found",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Would like to check on cruise plans"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "phone_plan.cruise_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "9999"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "domestic_coverage": "false",
+        "last_four": "9999",
+        "phone_line_verified": "false"
+      },
+      "currentPage": {
+        "name": "Speak to an Agent",
+        "flow": "Speak to an Agent"
+      },
+      "textResponses": [ {
+        "text": [ "I'm sorry, but that number isn't appearing in your account. Customer Service can help you with this." ]
+      }, {
+        "text": [ "I will connect you to an agent. " ]
+      }, {
+        "text": [ "Before I transfer you, did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Speak to an Agent"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "domestic_coverage": "false",
+        "last_four": "9999",
+        "phone_line_verified": "false"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Speak to an Agent"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. Please wait while I connect you to an agent." ]
+      } ],
+      "currentFlow": {
+        "name": "Speak to an Agent"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606951947,
+    "nanos": 297660000
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "name": "b3df3c44-db4d-4c67-b5ad-b762e4bb2c66",
+  "tags": [ "#adds_discounted_plan" ],
+  "displayName": "Happy path - Bill reduction - discounted plans - adds alternative plan ",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "do you have any discounted plans available?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "discount": "discount",
+        "save_bill": "true"
+      },
+      "triggeredIntent": {
+        "name": "bill_reduction.save_bill"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1111111111"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "discount": "discount",
+        "phone_number": "1111111111",
+        "save_bill": "true"
+      },
+      "currentPage": {
+        "name": "Suggest Discount Plans",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "The cheapest available plan for you is the #### plan. If you choose this plan, your bill will be reduced by $XX per month. Would you like to add this to your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "do you have any cheaper plans?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "discount": "discount",
+        "phone_number": "1111111111",
+        "save_bill": "true"
+      },
+      "triggeredIntent": {
+        "name": "bill_reduction.cheaper_plan_options"
+      },
+      "currentPage": {
+        "name": "Suggest Discount Plans",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "This is the cheapest option given your account details and spendings. Would you like to add this to your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hmm i do not want this"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "discount": "discount",
+        "phone_number": "1111111111",
+        "save_bill": "true"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Suggest Alt Discount Plans",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "We have another monthly plan option. It reduces your bill by $XX per month. Would you like to add this to your account?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "discount": "false",
+        "phone_number": "1111111111",
+        "save_bill": "true"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Great! This plan has been added to your account." ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "discount": "false",
+        "phone_number": "1111111111",
+        "save_bill": "true"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607538395,
+    "nanos": 508116000
+  }
+}

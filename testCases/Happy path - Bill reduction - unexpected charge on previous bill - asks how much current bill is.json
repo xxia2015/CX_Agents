@@ -1,0 +1,169 @@
+{
+  "name": "6ac84cc9-0d92-425c-aec6-b39f74f69e23",
+  "tags": [ "#previous_bill", "#film_purchase" ],
+  "displayName": "Happy path - Bill reduction - unexpected charge on previous bill - asks how much current bill is",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hi I see an unfamilliar charge on my bill"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "bill_reduction.initiate"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1231231234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "phone_number": "1231231234"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "To confirm, would you like to discuss your current bill or a previous bill?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "previous"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "previous",
+        "bill_without_purchase": 54.340000000000003,
+        "currency": "USD",
+        "first_month": "November 01, 2020",
+        "phone_number": "1231231234",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "total_bill": 64.329999999999998
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Ok, your previous bill.\nAlright, I can check your bill and see what might have caused the discrepancy.\nOn  November 01, 2020, it looks like \"The Godfather\" was purchased for a sum of  9.99 USD." ]
+      }, {
+        "text": [ "What else can I help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "and my current bill how much is that"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "previous",
+        "bill_without_purchase": 54.340000000000003,
+        "currency": "USD",
+        "first_month": "November 01, 2020",
+        "phone_number": "1231231234",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "faq.bill_reduction.current_bill"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "\nYour current charges include XXXXXXX. Would you like me to help you suggest options to reduce your bill?\n" ]
+      }, {
+        "text": [ "What else can I help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "previous",
+        "bill_without_purchase": 54.340000000000003,
+        "currency": "USD",
+        "first_month": "November 01, 2020",
+        "phone_number": "1231231234",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606862483,
+    "nanos": 54718000
+  }
+}

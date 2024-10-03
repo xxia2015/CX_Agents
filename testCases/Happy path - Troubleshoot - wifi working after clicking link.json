@@ -1,0 +1,124 @@
+{
+  "name": "88c2d931-a8bf-4b5e-a37e-cbc97cd3567f",
+  "tags": [ "#wifi_password_reset_with_link" ],
+  "displayName": "Happy path - Troubleshoot - wifi working after clicking link",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "change password please"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "password_change": "true"
+      },
+      "triggeredIntent": {
+        "name": "troubleshoot.password_change"
+      },
+      "currentPage": {
+        "name": "Collect Phone Number",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Sure, I can help you change the password. Can you please tell me your subscribed phone number?" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "2222222222"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "password_change": "true",
+        "phone_number": "2222222222"
+      },
+      "currentPage": {
+        "name": "Password Change",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "A password reset link has been sent to your registered mobile device. Please click the link to change your password. Did that resolve the issue?" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "password_change": "true",
+        "phone_number": "2222222222"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Perfect, I’m glad I could help. " ]
+      }, {
+        "text": [ "Can I help you with anything else?" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "password_change": "true",
+        "phone_number": "2222222222"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.thanks"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Okay, have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607569570,
+    "nanos": 770100000
+  }
+}

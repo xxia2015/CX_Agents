@@ -1,0 +1,219 @@
+{
+  "name": "0cd2f616-aacf-4bf5-8921-ae099dd40a6a",
+  "tags": [ "#current_bill", "#film_purchase" ],
+  "displayName": "Agent redirect - Bill reduction - current - film purchase - asks for live agent at \"Anything else?\"",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "my bill is a bit higher this month can you please check for me why that is"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "bill_reduction.initiate"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "999999"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "phone_number": "999999"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "To confirm, would you like to discuss your current bill or a previous bill?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "current"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "true",
+        "bill_month": "December",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "currency": "USD",
+        "first_month": "December 01, 2020",
+        "last_month": "November",
+        "phone_number": "999999",
+        "product_line": "phone",
+        "purchase": "device protection",
+        "purchase_amount": 9.9900000000000002,
+        "total_bill": 64.329999999999998
+      },
+      "currentPage": {
+        "name": "Suggest Service Cancellation",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "I see that your phone bill went up in December compared to your November bill. Seems like device protection was added by default when you purchased a new phone.\nDo you want to cancel this service?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks I will keep it then"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "true",
+        "bill_month": "December",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "currency": "USD",
+        "first_month": "December 01, 2020",
+        "last_month": "November",
+        "phone_number": "999999",
+        "product_line": "phone",
+        "purchase": "device protection",
+        "purchase_amount": 9.9900000000000002,
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Sure. Your total bill is still 64.33 USD including device protection." ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "live agent please"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "true",
+        "bill_month": "December",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "currency": "USD",
+        "first_month": "December 01, 2020",
+        "last_month": "November",
+        "phone_number": "999999",
+        "product_line": "phone",
+        "purchase": "device protection",
+        "purchase_amount": 9.9900000000000002,
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "small_talk.agent_redirect"
+      },
+      "currentPage": {
+        "name": "Speak to an Agent",
+        "flow": "Speak to an Agent"
+      },
+      "textResponses": [ {
+        "text": [ "Sure thing." ]
+      }, {
+        "text": [ "I will connect you to an agent. " ]
+      }, {
+        "text": [ "Before I transfer you, did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Speak to an Agent"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thank you I am good"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "true",
+        "bill_month": "December",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "currency": "USD",
+        "first_month": "December 01, 2020",
+        "last_month": "November",
+        "phone_number": "999999",
+        "product_line": "phone",
+        "purchase": "device protection",
+        "purchase_amount": 9.9900000000000002,
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Speak to an Agent"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. Please wait while I connect you to an agent." ]
+      } ],
+      "currentFlow": {
+        "name": "Speak to an Agent"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607029229,
+    "nanos": 109273000
+  }
+}

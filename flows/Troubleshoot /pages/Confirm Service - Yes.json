@@ -1,0 +1,32 @@
+{
+  "name": "412eccd0-1f1c-4b45-b079-6ddce5c6a28a",
+  "displayName": "Confirm Service - Yes",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm glad it helped." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "e68c2631-5479-455a-8ec3-acf516b441ff"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I am so sorry to hear that. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "1c067c79-ffd0-470e-b46f-ef4b45ff6919"
+  } ]
+}

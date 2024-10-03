@@ -1,0 +1,91 @@
+{
+  "name": "02e3078a-8ee9-4709-8f69-beec6b4b1668",
+  "displayName": "Anything else?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "5f36be4d-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "small_talk.agent_redirect",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "5f36be4e-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "small_talk.thanks",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You're welcome! Have a great day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "5f36be4f-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure thing! Have a great day." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "5f36be50-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.activation_fee",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "There is no activation charge for this plan." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be51-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.cruise_plan_add",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Cruise Plan",
+    "name": "858f7434-87b7-4a5f-879a-ee771daf831a"
+  }, {
+    "condition": "$session.params.agent_redirect = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "b1b56a87-9d30-4f23-a37f-c2f2e62c9618"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Did you have any other questions?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be52-0000-210f-859a-f403043d09f0"
+  } ],
+  "transitionRouteGroups": [ "Bill Reduction", "Plan Questions", "Troubleshoot", "General FAQ" ]
+}

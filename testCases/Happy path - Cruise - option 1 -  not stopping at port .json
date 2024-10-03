@@ -1,0 +1,199 @@
+{
+  "name": "22abfea5-04f7-454f-9488-ca880defb55b",
+  "tags": [ "#cruise_option_1", "#no_port_stop" ],
+  "displayName": "Happy path - Cruise - option 1 -  not stopping at port ",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "need to check in on plans for a cruise"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "phone_plan.cruise_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Can I get the last four digits of the phone line you'll be taking with you?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Cruise Duration",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "How many days is your cruise?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "just one"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cruise_duration": 1,
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Cruise Package Info",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, let me pull up the available cruise packages for 1 days." ]
+      }, {
+        "text": [ "You can choose one of 2 available plans:" ]
+      }, {
+        "text": [ "Option 1 includes talk and text. It costs $[XX]/day. More info here [URL]." ]
+      }, {
+        "text": [ "Option 2 includes talk, text and data. It costs $[XX]/day. More info here [URL]." ]
+      }, {
+        "text": [ "Which cruise plan would you like to add?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "option one"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cruise_duration": 1,
+        "cruise_plan": "Option 1",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Port",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. " ]
+      }, {
+        "text": [ "I've added that plan to your account." ]
+      }, {
+        "text": [ "While on your cruise, you may need coverage on land." ]
+      }, {
+        "text": [ "May I ask you which port you will be stopping at?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "don't know yet"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cruise_duration": 1,
+        "cruise_plan": "Option 1",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "No problem, I will not add any international coverage plans. " ]
+      }, {
+        "text": [ "Is there anything else I can help you with today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thank you!"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cruise_duration": 1,
+        "cruise_plan": "Option 1",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606859721,
+    "nanos": 413444000
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "name": "ca2419c9-08da-4226-a1dc-39cae6deb077",
+  "tags": [ "#power_outage" ],
+  "displayName": "Happy path - Power outage - asks for time-frame",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "my wifi isn't working"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_issue": "true"
+      },
+      "triggeredIntent": {
+        "name": "troubleshoot.router_issue"
+      },
+      "currentPage": {
+        "name": "Collect Zip Code",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "I’m sorry to hear that. Can you please tell me your current zip code so that I can help you with the problem?" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "5000"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_issue": "true",
+        "zip_code": "5000"
+      },
+      "currentPage": {
+        "name": "Power Outage - Yes",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "It appears as though there’s an outage in your area. We are actively working on it and you will be notified when service is back on.  Can I help you with anything else?" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "how long do you think it will take?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_issue": "true",
+        "zip_code": "5000"
+      },
+      "triggeredIntent": {
+        "name": "troubleshoot.outage_timeline"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Our current estimate is that service should be working again in 1-2 hours. " ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_issue": "true",
+        "zip_code": "5000"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Okay, have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607555141,
+    "nanos": 228224000
+  }
+}

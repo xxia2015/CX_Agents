@@ -1,0 +1,10 @@
+{
+  "name": "000bafd1-8040-4744-be16-fb36861b2bab",
+  "displayName": "phone_plan.includes_mms",
+  "parameters": [ {
+    "id": "extended-bill-state",
+    "entityType": "@extended-bill-state"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 29
+}

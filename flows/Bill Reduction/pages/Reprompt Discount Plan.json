@@ -1,0 +1,48 @@
+{
+  "name": "74824c24-480d-4ddb-9488-c30c9a082d97",
+  "displayName": "Reprompt Discount Plan",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "You would like to switch to the cheaper plan. Is that correct?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Plan Added",
+    "name": "b1883119-5940-4074-8431-585332c5e933"
+  }, {
+    "intent": "bill_reduction.cheaper_plan_options",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "This is the cheapest option given your account details and spendings. Would you like to add this to your account?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "137b339e-519e-481d-9f0c-94b625633fca"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Suggest Alt Discount Plans",
+    "name": "b973337f-fa9a-4c13-8f71-4a6bd72a8f91"
+  }, {
+    "intent": "bill_reduction.other_options",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Suggest Alt Discount Plans",
+    "name": "71014dde-2e43-4676-9bc7-836ba687d808"
+  } ]
+}

@@ -1,0 +1,162 @@
+{
+  "name": "59907731-34d6-4f04-b623-e09c973d40f9",
+  "tags": [ "#cruise_not_adding_plan" ],
+  "displayName": "Happy path - Cruise - \"No\" to add plan",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "checking cruise plans"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "phone_plan.cruise_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1111111111"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "domestic_coverage": "false",
+        "last_four": "1111111111",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Cruise Duration",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "How many days is your cruise?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "nine"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cruise_duration": 9,
+        "domestic_coverage": "false",
+        "last_four": "1111111111",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Cruise Package Info",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, let me pull up the available cruise packages for 9 days." ]
+      }, {
+        "text": [ "You can choose one of 2 available plans:" ]
+      }, {
+        "text": [ "Option 1 includes talk and text. It costs $[XX]/day. More info here [URL]." ]
+      }, {
+        "text": [ "Option 2 includes talk, text and data. It costs $[XX]/day. More info here [URL]." ]
+      }, {
+        "text": [ "Which cruise plan would you like to add?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "none at this point thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cruise_duration": 9,
+        "domestic_coverage": "false",
+        "last_four": "1111111111",
+        "phone_line_verified": "true"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. I will not add any cruise plans to your account." ]
+      }, {
+        "text": [ "Is there anything else I can help you with today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "nope"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cruise_duration": 9,
+        "domestic_coverage": "false",
+        "last_four": "1111111111",
+        "phone_line_verified": "true"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606952669,
+    "nanos": 833392000
+  }
+}

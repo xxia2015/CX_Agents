@@ -1,0 +1,228 @@
+{
+  "name": "a5922e35-f45e-4aa5-80d5-48c96c6bb7c8",
+  "tags": [ "#cancel_device_protection_yes" ],
+  "displayName": "Agent redirect - Bill reduction - current - removes device protection",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "my bill is much higher this month"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "discount": "false",
+        "save_bill": "false"
+      },
+      "triggeredIntent": {
+        "name": "bill_reduction.initiate"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "999999"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "discount": "false",
+        "phone_number": "999999",
+        "save_bill": "false"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "To confirm, would you like to discuss your current bill or a previous bill?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "current"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "true",
+        "bill_month": "December",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "discount": "false",
+        "first_month": "December 01, 2020",
+        "last_month": "November",
+        "phone_number": "999999",
+        "product_line": "phone",
+        "purchase": "device protection",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "false",
+        "total_bill": 64.329999999999998
+      },
+      "currentPage": {
+        "name": "Suggest Service Cancellation",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "I see that your phone bill increased from November to December. This was because device protection was added when you purchased your new phone.\nWould you like to cancel this service?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "is this a recurring fee or only a one time pay"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "true",
+        "bill_month": "December",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "discount": "false",
+        "first_month": "December 01, 2020",
+        "last_month": "November",
+        "payment_type": [ "recurring", "one time" ],
+        "phone_number": "999999",
+        "product_line": "phone",
+        "purchase": "device protection",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "false",
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "bill_reduction.paymentcharge_type"
+      },
+      "currentPage": {
+        "name": "Suggest Service Cancellation",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Your purchase of \"device protection\" is a recurring charge. Do you want to cancel this service? " ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes please"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "true",
+        "bill_month": "December",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "discount": "false",
+        "first_month": "December 01, 2020",
+        "last_month": "November",
+        "payment_type": [ "recurring", "one time" ],
+        "phone_number": "999999",
+        "product_line": "phone",
+        "purchase": "device protection",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "false",
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Ok, your new bill will be $54.34 starting next month. " ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "ok thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "true",
+        "bill_month": "December",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "discount": "false",
+        "first_month": "December 01, 2020",
+        "last_month": "November",
+        "payment_type": [ "recurring", "one time" ],
+        "phone_number": "999999",
+        "product_line": "phone",
+        "purchase": "device protection",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "false",
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "small_talk.thanks"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607547271,
+    "nanos": 804293000
+  }
+}

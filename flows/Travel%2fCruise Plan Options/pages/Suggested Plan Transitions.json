@@ -1,0 +1,25 @@
+{
+  "name": "b3fd4dad-b41d-4664-8b84-b0e489814433",
+  "displayName": "Suggested Plan Transitions",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.suggested_plan = \"monthly\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Add Monthly Plan",
+    "name": "5f36be6c-0000-210f-859a-f403043d09f0"
+  }, {
+    "condition": "$session.params.suggested_plan = \"daily\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Add Daily Plan",
+    "name": "5f36be6d-0000-210f-859a-f403043d09f0"
+  } ]
+}

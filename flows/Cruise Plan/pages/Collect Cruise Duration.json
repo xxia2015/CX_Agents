@@ -1,0 +1,55 @@
+{
+  "name": "5077827d-0897-43cc-906e-54c5151aeb35",
+  "displayName": "Collect Cruise Duration",
+  "form": {
+    "parameters": [ {
+      "displayName": "cruise_duration",
+      "required": true,
+      "entityType": "@sys.number-integer",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "How many days is your cruise?" ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn't get that. Please tell me how many days you will be at sea on your cruise." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "5f36be36-0000-210f-859a-f403043d09f0"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn't get that. Could you please give approximate amount of days if you are not sure about the exact number of days you would be spending there." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "d6587de6-4dc8-47f9-a5f9-99903be3c9fd"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Trigger Cruise Plan Info",
+    "name": "5f36be35-0000-210f-859a-f403043d09f0"
+  } ]
+}

@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "@sys.geo-country",
+    "synonyms": [ "@sys.geo-country" ],
+    "languageCode": "en"
+  }, {
+    "value": "@map-city-to-country",
+    "synonyms": [ "@map-city-to-country" ],
+    "languageCode": "en"
+  } ]
+}

@@ -1,0 +1,180 @@
+{
+  "name": "20ce17fd-2ad6-45c5-be31-cee55cc00005",
+  "tags": [ "#current_bill", "#film_purchase", "#unfamiliar_charge" ],
+  "displayName": "Bill reduction - current - film purchase - unfamiliar charge - live agent ",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "my bill is much higher this month"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "discount": "false",
+        "save_bill": "false"
+      },
+      "triggeredIntent": {
+        "name": "bill_reduction.initiate"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1111111111"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "discount": "false",
+        "phone_number": "1111111111",
+        "save_bill": "false"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "To confirm, would you like to discuss your current bill or a previous bill?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "current "
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "discount": "false",
+        "first_month": "December 01, 2020",
+        "phone_number": "1111111111",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "false",
+        "total_bill": 64.329999999999998
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Ok, your current bill.\nI can check your bill to see what might have caused the discrepancy.\nOn December 01, 2020, it looks like \"The Godfather\" was purchased for a sum of $9.99." ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I don't know what this is for, I didn't buy it"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "discount": "false",
+        "first_month": "December 01, 2020",
+        "phone_number": "1111111111",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "false",
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "bill_reduction.unfamiliar_charge"
+      },
+      "currentPage": {
+        "name": "Speak to an Agent",
+        "flow": "Speak to an Agent"
+      },
+      "textResponses": [ {
+        "text": [ "I'm sorry to hear that. " ]
+      }, {
+        "text": [ "I will connect you to an agent. " ]
+      }, {
+        "text": [ "Before I transfer you, did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Speak to an Agent"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "discount": "false",
+        "first_month": "December 01, 2020",
+        "phone_number": "1111111111",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "false",
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Speak to an Agent"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. Please wait while I connect you to an agent." ]
+      } ],
+      "currentFlow": {
+        "name": "Speak to an Agent"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607547756,
+    "nanos": 247359000
+  }
+}

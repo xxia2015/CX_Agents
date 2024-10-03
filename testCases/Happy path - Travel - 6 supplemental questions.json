@@ -1,0 +1,533 @@
+{
+  "name": "262f7264-36a6-4645-aec1-b1992084cbe0",
+  "tags": [ "#travel", "#singapore", "#questions" ],
+  "displayName": "Happy path - Travel - 6 supplemental questions",
+  "notes": "Agent helps user add a monthly plan for a trip to Singapore while answering a number of plan specific questions.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi! I'm the virtual phone plan agent. I can help you add travel and cruise packages to your phone plan. How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I need help for a trip I'm taking soon"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "phone_plan.travel_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+      }, {
+        "text": [ "Can I get the last four digits of the phone line you'll be taking with you?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "What country will you be visiting?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Singapore"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "destination": "Singapore",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "When will you arrive?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "tomorrow"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 2,
+          "month": 10,
+          "year": 2020
+        },
+        "destination": "Singapore",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "How many days are you there for?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "20"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 2,
+          "month": 10,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 200,
+        "destination": "Singapore",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 20
+      },
+      "currentPage": {
+        "name": "Add Monthly Plan",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "The cheapest available plan for you is the monthly plan. If you choose this plan, you will get ##GB of data for $XX per month." ]
+      }, {
+        "text": [ "Would you like to add this plan?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "what other options are there?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 2,
+          "month": 10,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 200,
+        "destination": "Singapore",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 20
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.other_options"
+      },
+      "currentPage": {
+        "name": "Suggest Alt Monthly Plan",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "We have another monthly plan option. It includes ##GB for $XX per month." ]
+      }, {
+        "text": [ "Would you like to add this plan?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "does the plan include picture messages?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 2,
+          "month": 10,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 200,
+        "destination": "Singapore",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 20
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.includes_mms"
+      },
+      "currentPage": {
+        "name": "Suggest Alt Monthly Plan",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "For the monthly plan, both SMS and MMS are included. " ]
+      }, {
+        "text": [ "Would you like to add this plan?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "is that per line or on all my lines?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 2,
+          "month": 10,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 200,
+        "destination": "Singapore",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 20
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.covers_all_lines"
+      },
+      "currentPage": {
+        "name": "Suggest Alt Monthly Plan",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "The monthly plan is added on a per-line basis. " ]
+      }, {
+        "text": [ "Would you like to add this plan?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "and regular texts are included?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 2,
+          "month": 10,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 200,
+        "destination": "Singapore",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 20
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.includes_sms"
+      },
+      "currentPage": {
+        "name": "Suggest Alt Monthly Plan",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "For the monthly plan, both SMS and MMS are included. " ]
+      }, {
+        "text": [ "Would you like to add this plan?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "is there a fee to turn it on?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 2,
+          "month": 10,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 200,
+        "destination": "Singapore",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 20
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.activation_fee"
+      },
+      "currentPage": {
+        "name": "Suggest Alt Monthly Plan",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "There is no activation charge for this plan. " ]
+      }, {
+        "text": [ "Would you like to add this plan?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "and once i return, how do i cancel it?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 2,
+          "month": 10,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 200,
+        "destination": "Singapore",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 20
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.plan_cancel"
+      },
+      "currentPage": {
+        "name": "Suggest Alt Monthly Plan",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "Your international plan will cancel automatically once you return." ]
+      }, {
+        "text": [ "Would you like to add this plan?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "ok, let's do it"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 2,
+          "month": 10,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 200,
+        "destination": "Singapore",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 20
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "Great! This plan has been added to your account." ]
+      }, {
+        "text": [ "Did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "nope"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 2,
+          "month": 10,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 200,
+        "destination": "Singapore",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 20
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1601572912,
+    "nanos": 218000000
+  }
+}

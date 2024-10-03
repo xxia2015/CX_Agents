@@ -1,0 +1,241 @@
+{
+  "name": "3067c18b-3178-4cfc-a9ed-a748746951aa",
+  "tags": [ "#agent_redirect", "#cruise_option_2" ],
+  "displayName": "Agent redirect - Cruise - option 2 0 no port - agent redirect",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "can I speak with an agent please"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "agent_redirect": "true"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.agent_redirect"
+      },
+      "currentPage": {
+        "name": "Speak to an Agent",
+        "flow": "Speak to an Agent"
+      },
+      "textResponses": [ {
+        "text": [ "Sure thing." ]
+      }, {
+        "text": [ "I will connect you to an agent. " ]
+      }, {
+        "text": [ "Before I transfer you, did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Speak to an Agent"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yeah I need to get a cruise plan"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "agent_redirect": "true"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.cruise_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "2222222222"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "agent_redirect": "true",
+        "domestic_coverage": "false",
+        "phone_line_verified": "true",
+        "phone_number": "2222222222"
+      },
+      "currentPage": {
+        "name": "Collect Cruise Duration",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "How many days is your cruise?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "5"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "agent_redirect": "true",
+        "cruise_duration": 5,
+        "domestic_coverage": "false",
+        "phone_line_verified": "true",
+        "phone_number": "2222222222"
+      },
+      "currentPage": {
+        "name": "Cruise Package Info",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, let me pull up the available cruise packages for 5 days." ]
+      }, {
+        "text": [ "You can choose one of 2 available plans:" ]
+      }, {
+        "text": [ "Option 1 includes talk and text. It costs $[XX]/day. More info here [URL]." ]
+      }, {
+        "text": [ "Option 2 includes talk, text and data. It costs $[XX]/day. More info here [URL]." ]
+      }, {
+        "text": [ "Which cruise plan would you like to add?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "2"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "agent_redirect": "true",
+        "cruise_duration": 5,
+        "cruise_plan": "Option 2",
+        "domestic_coverage": "false",
+        "phone_line_verified": "true",
+        "phone_number": "2222222222"
+      },
+      "currentPage": {
+        "name": "Collect Port",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. " ]
+      }, {
+        "text": [ "I've added that plan to your account." ]
+      }, {
+        "text": [ "While on your cruise, you may also need coverage on land." ]
+      }, {
+        "text": [ "What port will you be stopping at?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no port"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "agent_redirect": "true",
+        "cruise_duration": 5,
+        "cruise_plan": "Option 2",
+        "domestic_coverage": "false",
+        "phone_line_verified": "true",
+        "phone_number": "2222222222"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Speak to an Agent",
+        "flow": "Speak to an Agent"
+      },
+      "textResponses": [ {
+        "text": [ "No problem, I will not add any international coverage plans. " ]
+      }, {
+        "text": [ "I will connect you to an agent. " ]
+      }, {
+        "text": [ "Before I transfer you, did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Speak to an Agent"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "agent_redirect": "true",
+        "cruise_duration": 5,
+        "cruise_plan": "Option 2",
+        "domestic_coverage": "false",
+        "phone_line_verified": "true",
+        "phone_number": "2222222222"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Speak to an Agent"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. Please wait while I connect you to an agent." ]
+      } ],
+      "currentFlow": {
+        "name": "Speak to an Agent"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607632751,
+    "nanos": 632601000
+  }
+}

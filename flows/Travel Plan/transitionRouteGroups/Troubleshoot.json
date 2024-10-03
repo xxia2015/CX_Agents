@@ -1,0 +1,81 @@
+{
+  "name": "e5629908-b39f-4607-b6d9-aa9975d2f4bb",
+  "displayName": "Troubleshoot",
+  "transitionRoutes": [ {
+    "intent": "troubleshoot.router_placement",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "router_placement",
+        "value": "true"
+      }, {
+        "parameter": "router_issue",
+        "value": "false"
+      }, {
+        "parameter": "outage_issue",
+        "value": "false"
+      }, {
+        "parameter": "password_change",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Troubleshoot ",
+    "name": "11eb6567-6607-44ea-bbb3-a017f8564527"
+  }, {
+    "intent": "troubleshoot.router_issue",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "router_issue",
+        "value": "true"
+      }, {
+        "parameter": "password_change",
+        "value": "false"
+      }, {
+        "parameter": "outage_issue",
+        "value": "false"
+      }, {
+        "parameter": "router_placement",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Troubleshoot ",
+    "name": "9efefa3a-f6da-4140-a0fb-cba2514bc8cd"
+  }, {
+    "intent": "troubleshoot.outage_issue",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "outage_issue",
+        "value": "true"
+      }, {
+        "parameter": "router_issue",
+        "value": "false"
+      }, {
+        "parameter": "password_change",
+        "value": "false"
+      }, {
+        "parameter": "router_placement",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Troubleshoot ",
+    "name": "23ac51a4-92b2-4e26-b6c1-10a866350fc5"
+  }, {
+    "intent": "troubleshoot.password_change",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "password_change",
+        "value": "true"
+      }, {
+        "parameter": "router_issue",
+        "value": "false"
+      }, {
+        "parameter": "outage_issue",
+        "value": "false"
+      }, {
+        "parameter": "router_placement",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Troubleshoot ",
+    "name": "3feddf0e-0336-40e6-aa14-78c6dda5b76f"
+  } ]
+}

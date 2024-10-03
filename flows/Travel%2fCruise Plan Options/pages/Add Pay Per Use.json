@@ -1,0 +1,62 @@
+{
+  "name": "9626f541-8f2e-4982-89e3-a12d44bbc959",
+  "displayName": "Add Pay Per Use",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "For this destination and duration, you will pay per use. You do not need to add any plan to your line. You will be charged only for the data and minutes you use." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Anything else?",
+    "name": "c8148a22-b25e-4c12-b017-523fcd0573ed"
+  }, {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Alright, the rates are as follows:" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Inbound and outbound calls are each $[X.XX]" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "SMS and MMS are $[X.XX]" ]
+        },
+        "languageCode": "en"
+      }, {
+        "text": {
+          "text": [ "Each GB of data used is $[X.XX]" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "d51849d8-f58f-4a41-8a2e-c1cee3f45469"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Would you like to hear more about these rates?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "a9acc011-d0a2-4305-b7be-0765311b0b77"
+  } ],
+  "transitionRouteGroups": [ "Monthly Plan" ]
+}

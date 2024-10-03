@@ -1,0 +1,55 @@
+{
+  "name": "d2aa26ef-57e6-4dfb-9757-8cab1d7f3f9c",
+  "displayName": "Collect Zip Code",
+  "form": {
+    "parameters": [ {
+      "displayName": "zip_code",
+      "required": true,
+      "entityType": "@sys.zip-code",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "I’m sorry to hear that. Can you please tell me your current zip code so that I can help you with the problem?" ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn't get that. Please tell me  your zip-code." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "673f60b4-e052-428e-82c6-7419acc675cb"
+        } ]
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.outage_issue = \"true\" AND $session.params.zip_code \u003e 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Power Outage - Yes",
+    "name": "1543606f-cf22-4c80-a0e1-8c4eda88a3b2"
+  }, {
+    "condition": "$session.params.zip_code \u003e 5000",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Power Outage - No",
+    "name": "1d7b10ef-a7ab-447d-a8e9-e0db8eb0a6f3"
+  }, {
+    "condition": "$session.params.zip_code \u003c= 5000",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Power Outage - Yes",
+    "name": "55443ea6-26ba-4bc1-8b73-c78d70a7ecf5"
+  } ]
+}

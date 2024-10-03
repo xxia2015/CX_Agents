@@ -1,0 +1,70 @@
+{
+  "name": "8d88cb33-d4d9-4fa2-9c52-98a9252b4829",
+  "displayName": "Speak to an Agent",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "I will connect you to an agent. " ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "agent_redirect",
+      "value": "true"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You can go ahead and ask your question at any time." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "5f36be44-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Got it. Please wait while I connect you to an agent." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "5f36be45-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.cruise_plan_add",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Cruise Plan",
+    "name": "5f36be46-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.travel_plan_add",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Travel Plan",
+    "name": "5f36be47-0000-210f-859a-f403043d09f0"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Before I transfer you, did you have any other questions?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be48-0000-210f-859a-f403043d09f0"
+  } ],
+  "transitionRouteGroups": [ "Plan Questions", "Bill Reduction", "Troubleshoot" ]
+}

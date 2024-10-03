@@ -1,0 +1,108 @@
+{
+  "name": "ca0855a7-18cf-42bb-ac8b-a2f353092948",
+  "displayName": "Collect Travel Info",
+  "form": {
+    "parameters": [ {
+      "displayName": "destination",
+      "required": true,
+      "entityType": "@extended-countries",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What country will you be visiting?", "What country will you be traveling to?" ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn't get that. Please tell me which country you are traveling to." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "5f36be59-0000-210f-859a-f403043d09f0"
+        } ]
+      }
+    }, {
+      "displayName": "arrival_date",
+      "required": true,
+      "entityType": "@sys.date",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "When will you get there?", "When will you arrive?" ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn't get that. Please tell me when will you arrive?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "37ecc247-f150-4f69-8148-8a38d2f5cc41"
+        } ]
+      }
+    }, {
+      "displayName": "trip_duration",
+      "required": true,
+      "entityType": "@sys.number-integer",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "How many days will you be spending there?", "How many days are you there for?" ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn't get that.  Please tell me how many days would you be spending there?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "42048642-fad6-48b0-abee-4e723ca735af"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn't get that. Could you please give approximate amount of days if you are not sure about the exact number of days you would be spending there." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "a60884e3-4604-43f7-9010-e4afefd987c4"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Validate Domestic Coverage",
+    "name": "5f36be58-0000-210f-859a-f403043d09f0"
+  } ],
+  "transitionRouteGroups": [ "Travel Supplementals" ]
+}

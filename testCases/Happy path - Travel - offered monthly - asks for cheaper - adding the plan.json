@@ -1,0 +1,269 @@
+{
+  "name": "1a90107f-807a-4dd9-97c0-7964bce42564",
+  "tags": [ "#travel", "#india", "#monthly_plan" ],
+  "displayName": "Happy path - Travel - offered monthly - asks for cheaper - adding the plan",
+  "notes": "Agent helps user add a monthly plan for their 10 day trip to India, which is the cheapest option available.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I am going to travel to india shortly and want to use data"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "destination": "India"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.travel_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+      }, {
+        "text": [ "Can I get the last four digits of the phone line you'll be taking with you?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "destination": "India",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "When will you get there?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "tomorrow"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 2,
+          "month": 10,
+          "year": 2020
+        },
+        "destination": "India",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "How many days are you there for?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "10"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 2,
+          "month": 10,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 100,
+        "destination": "India",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 10
+      },
+      "currentPage": {
+        "name": "Add Monthly Plan",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "The cheapest available plan for you is the monthly plan. If you choose this plan, you will get ##GB of data for $XX per month." ]
+      }, {
+        "text": [ "Would you like to add this plan?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "do you have anything more affordable"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 2,
+          "month": 10,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 100,
+        "destination": "India",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 10
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.cheaper_plan_options"
+      },
+      "currentPage": {
+        "name": "Add Monthly Plan",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "This is the cheapest option given your destination and trip length." ]
+      }, {
+        "text": [ "Would you like to add this plan?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "sure"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 2,
+          "month": 10,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 100,
+        "destination": "India",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 10
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "Great! This plan has been added to your account." ]
+      }, {
+        "text": [ "Did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thats it"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 2,
+          "month": 10,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 100,
+        "destination": "India",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 10
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1601571914,
+    "nanos": 768000000
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "name": "8df7d9f7-27bd-49cf-960a-5156a4994a53",
+  "tags": [ "#travel", "#mexico", "#redirect" ],
+  "displayName": "Agent redirect - Travel - already covered - asks to speak with live agent on \"Anything else\"",
+  "notes": "User is automatically covered for travel to Mexico under their plan, but wanted to speak to an agent about other issues.",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hello"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi! I'm the virtual telecommunications agent. I can help you resolve billing and plan questions, troubleshoot, and add travel and cruise plans. How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "i'm going to be traveling soon"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "phone_plan.travel_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+      }, {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "What country will you be visiting?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "mexico"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "destination": "Mexico",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "When will you arrive?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "tomorrow!"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 3,
+          "month": 12,
+          "year": 2020
+        },
+        "destination": "Mexico",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "How many days are you there for?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "14"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 3,
+          "month": 12,
+          "year": 2020
+        },
+        "coverage": "both",
+        "destination": "Mexico",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true",
+        "trip_duration": 14
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Great news! You are covered! There is no further action needed on your part." ]
+      }, {
+        "text": [ "Did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes i'd like to speak to an agent about some other issues"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 3,
+          "month": 12,
+          "year": 2020
+        },
+        "coverage": "both",
+        "destination": "Mexico",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true",
+        "trip_duration": 14
+      },
+      "triggeredIntent": {
+        "name": "small_talk.agent_redirect"
+      },
+      "currentPage": {
+        "name": "Speak to an Agent",
+        "flow": "Speak to an Agent"
+      },
+      "textResponses": [ {
+        "text": [ "I will connect you to an agent. " ]
+      }, {
+        "text": [ "Before I transfer you, did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Speak to an Agent"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 3,
+          "month": 12,
+          "year": 2020
+        },
+        "coverage": "both",
+        "destination": "Mexico",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true",
+        "trip_duration": 14
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Speak to an Agent"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. Please wait while I connect you to an agent." ]
+      } ],
+      "currentFlow": {
+        "name": "Speak to an Agent"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1601571705,
+    "nanos": 959000000
+  }
+}

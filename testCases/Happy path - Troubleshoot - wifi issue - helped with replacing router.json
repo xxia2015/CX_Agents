@@ -1,0 +1,123 @@
+{
+  "name": "baf4cec1-40c7-4118-9702-e46cd29b6320",
+  "tags": [ "#wifi_replacement_worked" ],
+  "displayName": "Happy path - Troubleshoot - wifi issue - helped with replacing router",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "troubleshoot related"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "faq.troubleshoot.service_type"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can help you understand current outages, restart routers, change WiFi passwords, and determine optimal router placement." ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "how place the router for best reception"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_placement": "true"
+      },
+      "triggeredIntent": {
+        "name": "troubleshoot.router_placement"
+      },
+      "currentPage": {
+        "name": "Confirm Service - Yes",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Sure, Let me help you with that." ]
+      }, {
+        "text": [ "Please  follow the following guidelines for optimum router placements.\n1. Make sure your router is away from other electronic devices.\n2. Routers tend to spread signal downward, so it's best to mount the router as high as possible to maximize coverage.\n3. Routers send the signal out in all directions, so it’s better if you install it in a central location. Let me know if it helped!\n" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_placement": "true"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "I'm glad it helped." ]
+      }, {
+        "text": [ "Is there anything I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_placement": "true"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Okay, have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606866843,
+    "nanos": 275846000
+  }
+}

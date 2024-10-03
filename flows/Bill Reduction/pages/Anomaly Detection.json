@@ -1,0 +1,22 @@
+{
+  "name": "6399d2fc-b898-4172-9d58-5b3c6173190d",
+  "displayName": "Anomaly Detection",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.anomaly_detect = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Suggest Service Cancellation",
+    "name": "7b38c7a3-dded-4765-9f23-df2f8bcdf59d"
+  }, {
+    "condition": "$session.params.anomaly_detect = \"false\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Show Bill Details",
+    "name": "15bd03eb-3443-49b3-8532-33e16908a63f"
+  } ]
+}

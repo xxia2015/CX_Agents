@@ -1,0 +1,27 @@
+{
+  "name": "c900c93a-e46c-4219-a427-eaed06c44d09",
+  "displayName": "Cruise Supplementals",
+  "transitionRoutes": [ {
+    "intent": "phone_plan.includes_sms",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Both SMS and MMS are included." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be3f-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.activation_fee",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "There is no activation charge associated with this plan." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be40-0000-210f-859a-f403043d09f0"
+  } ]
+}

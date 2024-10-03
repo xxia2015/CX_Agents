@@ -1,0 +1,433 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "We will be leaving for ",
+      "auto": true
+    }, {
+      "text": "London",
+      "parameterId": "destination",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "next week",
+      "parameterId": "date-period",
+      "auto": true
+    }, {
+      "text": ".",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "will be leaving for ",
+      "auto": true
+    }, {
+      "text": "spain",
+      "parameterId": "destination",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "next week",
+      "parameterId": "date-period",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "can I use internet and make calls while I am abroad?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Going over seas and need a travel plan",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need help for a trip I'm taking soon.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is there an international traveling package for my phone?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want the ability to send text messages while traveling internationally."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I get international roaming enabled for my phone?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you add international roaming service for my phone?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How do I avoid roaming fees while using my phone in a different country?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Should I get a new phoen plan while going abroad?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please ensure my phone works in "
+    }, {
+      "text": "South Africa",
+      "parameterId": "destination"
+    }, {
+      "text": " from 11th to 22nd of this month."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you expand my coverage to countries outside the "
+    }, {
+      "text": "US",
+      "parameterId": "destination"
+    }, {
+      "text": " for about "
+    }, {
+      "text": "9",
+      "parameterId": "trip_duration"
+    }, {
+      "text": " days?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want international day pass on my phone for the next "
+    }, {
+      "text": "7",
+      "parameterId": "trip_duration"
+    }, {
+      "text": " days."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want travel pass for the next "
+    }, {
+      "text": "10",
+      "parameterId": "trip_duration"
+    }, {
+      "text": " days."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is my phone capable of working with networks in other countries?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I make phone calls while traveling internationally?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Will internet on my phone work while I am traveling abroad?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I will be visting my parents in "
+    }, {
+      "text": "Sri Lanka",
+      "parameterId": "destination"
+    }, {
+      "text": " for the next two weeks. Could you enable travel pass to my phone?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How do I add some type ofan international plan to my phone?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I use my data while traveling internationally?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am traveling internationally. How do I make use of my current phone instead of buying a new phone and/or a local SIM card?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am going to "
+    }, {
+      "text": "Israel",
+      "parameterId": "destination"
+    }, {
+      "text": " on a study tour. I want my phone to work in the local telecom network."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am going to "
+    }, {
+      "text": "Dubai",
+      "parameterId": "destination"
+    }, {
+      "text": " on a business tour. Please enable travel plan to my phone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I will be in India for the next "
+    }, {
+      "text": "3",
+      "parameterId": "trip_duration"
+    }, {
+      "text": " weeks. Can I make my phone work with Reliance network?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How do I make my current phone work in a differen country?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I will be in Canada next week and will be back the following week. Will my phone work in "
+    }, {
+      "text": "Canada",
+      "parameterId": "destination"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am planning for a hitchhiking tour in "
+    }, {
+      "text": "Asia",
+      "parameterId": "destination"
+    }, {
+      "text": " and "
+    }, {
+      "text": "Europe",
+      "parameterId": "destination"
+    }, {
+      "text": ". Any tips to remain in contact with my parents using my existing phone?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We are going on a honeymoon trip to "
+    }, {
+      "text": "New Zealand",
+      "parameterId": "destination"
+    }, {
+      "text": ". Can we have some kind of an international phone plan?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am going to "
+    }, {
+      "text": "Africa",
+      "parameterId": "destination"
+    }, {
+      "text": " on a study trip. Would my current phone work there?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How do I get international travel pass on my phone line?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I use my existing phone during international travel?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am going abroad on vacation. Can I use the remaining minutes in my phone while traveling?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I will be visiting my friend in "
+    }, {
+      "text": "Japan",
+      "parameterId": "destination"
+    }, {
+      "text": " next month and I want travel plan for my phone during this period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I will be going on a family vacation to "
+    }, {
+      "text": "Asia",
+      "parameterId": "destination"
+    }, {
+      "text": " for the next "
+    }, {
+      "text": "3",
+      "parameterId": "trip_duration"
+    }, {
+      "text": " weeks. Can I use my existing phone without taking a local SIM card?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm going on a business trip to "
+    }, {
+      "text": "Europe",
+      "parameterId": "destination"
+    }, {
+      "text": ". Can I get a travel pass added to my account?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "going to be traveling and need to make sure my phone will work"
+    } ],
+    "repeatCount": 3,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "going to be in "
+    }, {
+      "text": "china",
+      "parameterId": "destination"
+    }, {
+      "text": " and need coverage for my phone"
+    } ],
+    "repeatCount": 3,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "need a plan because I'll be in "
+    }, {
+      "text": "India",
+      "parameterId": "destination"
+    }, {
+      "text": " for "
+    }, {
+      "text": "3",
+      "parameterId": "trip_duration"
+    }, {
+      "text": " days"
+    } ],
+    "repeatCount": 3,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "traveling to mexico and want to make sure i have coverage"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "taking a flight to "
+    }, {
+      "text": "Montreal",
+      "parameterId": "destination"
+    }, {
+      "text": " and I want to make sure data works when i land"
+    } ],
+    "repeatCount": 3,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i'm going on a trip to "
+    }, {
+      "text": "Kuala Lumpur",
+      "parameterId": "destination"
+    }, {
+      "text": " for"
+    }, {
+      "text": " 7",
+      "parameterId": "trip_duration"
+    }, {
+      "text": " days"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i'm going on a trip to "
+    }, {
+      "text": "Kuala Lumpur",
+      "parameterId": "destination"
+    }, {
+      "text": " for "
+    }, {
+      "text": "7",
+      "parameterId": "trip_duration"
+    }, {
+      "text": " days"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "traveling to "
+    }, {
+      "text": "mexico",
+      "parameterId": "destination"
+    }, {
+      "text": " and want to make sure i have coverage"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

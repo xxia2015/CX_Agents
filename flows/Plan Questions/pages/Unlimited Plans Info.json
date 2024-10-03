@@ -1,0 +1,83 @@
+{
+  "name": "02a1c31d-360a-4810-852c-e265bd70d696",
+  "displayName": "Unlimited Plans Info",
+  "form": {
+    "parameters": [ {
+      "displayName": "unlimited_plan",
+      "required": true,
+      "entityType": "@plan-options",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Which unlimited plan would you like to change to?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "You can choose one of 2 available plans:" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Option 1 includes talk, text and data. Single line unlimited plans start at $[XX] per month, with the XX Unlimited plan. More info here [URL]." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Option 2 includes talk, text and data. Four-line unlimited plans start at $[XX] per month, with the XX Unlimited plan. More info here [URL]." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Got it. I will not add any unlimited plans to your account." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "c6816f04-19eb-4ab4-8fec-08abbb0e9322"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Got it. I will not add any unlimited plans to your account." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "96eddc9b-2f56-472f-9909-5da1f2858298"
+  }, {
+    "intent": "phone_plan.cheaper_plan_options",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "The cheapest unlimited plan is Option 1, which has a three-line unlimited plan for only $XX. To add it, you can simply say \"Option 1\"." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "2afbf544-726d-42cb-b638-1c7fdf22be1c"
+  }, {
+    "condition": "$session.params.unlimited_plan = \"Option 1\" OR $session.params.unlimited_plan = \"Option 2\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Unlimited Plan",
+    "name": "b27ea86d-ddc2-4835-93f7-9a7d4a74adf0"
+  } ],
+  "transitionRouteGroups": [ "Unlimited Plan Supplements" ]
+}

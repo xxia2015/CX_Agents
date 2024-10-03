@@ -1,0 +1,389 @@
+{
+  "name": "206e9a13-e7f9-4380-80d7-4f72dfcd344a",
+  "tags": [ "#current_bill", "#film_purchase", "#cruise_option_1", "#no_port_stop" ],
+  "displayName": "Happy path - Bill reduction - current - film purchase - Cruise - option 1 - no port",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi! I'm the virtual telecommunications agent. I can help you resolve billing and plan questions, troubleshoot, and add travel and cruise plans. How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "what types of bills can you check"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "faq.bill_reduction.bill_type"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I can help you investigate discrepancies in your current and previous TV, internet, and phone bills. How can I assist you today? " ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "so my bill was higher last month"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "discount": "false",
+        "save_bill": "false"
+      },
+      "triggeredIntent": {
+        "name": "bill_reduction.initiate"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "5555555555"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "discount": "false",
+        "phone_number": "5555555555",
+        "save_bill": "false"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "To confirm, would you like to discuss your current bill or a previous bill?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yeah current"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "discount": "false",
+        "first_month": "December 01, 2020",
+        "phone_number": "5555555555",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "false",
+        "total_bill": 64.329999999999998
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Ok, your current bill.\nI can check your bill to see what might have caused the discrepancy.\nOn December 01, 2020, it looks like \"The Godfather\" was purchased for a sum of $9.99." ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yeah I am going on a cruise soon what plans do you have"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "discount": "false",
+        "domestic_coverage": "false",
+        "first_month": "December 01, 2020",
+        "phone_line_verified": "true",
+        "phone_number": "5555555555",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "false",
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.cruise_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Cruise Duration",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "How many days is your cruise?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "10"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "cruise_duration": 10,
+        "discount": "false",
+        "domestic_coverage": "false",
+        "first_month": "December 01, 2020",
+        "phone_line_verified": "true",
+        "phone_number": "5555555555",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "false",
+        "total_bill": 64.329999999999998
+      },
+      "currentPage": {
+        "name": "Cruise Package Info",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, let me pull up the available cruise packages for 10 days." ]
+      }, {
+        "text": [ "You can choose one of 2 available plans:" ]
+      }, {
+        "text": [ "Option 1 includes talk and text. It costs $[XX]/day. More info here [URL]." ]
+      }, {
+        "text": [ "Option 2 includes talk, text and data. It costs $[XX]/day. More info here [URL]." ]
+      }, {
+        "text": [ "Which cruise plan would you like to add?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "cruise_duration": 10,
+        "cruise_plan": "Option 1",
+        "discount": "false",
+        "domestic_coverage": "false",
+        "first_month": "December 01, 2020",
+        "phone_line_verified": "true",
+        "phone_number": "5555555555",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "false",
+        "total_bill": 64.329999999999998
+      },
+      "currentPage": {
+        "name": "Collect Port",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. " ]
+      }, {
+        "text": [ "I've added that plan to your account." ]
+      }, {
+        "text": [ "While on your cruise, you may also need coverage on land." ]
+      }, {
+        "text": [ "What port will you be stopping at?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no port stop"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "cruise_duration": 10,
+        "cruise_plan": "Option 1",
+        "discount": "false",
+        "domestic_coverage": "false",
+        "first_month": "December 01, 2020",
+        "phone_line_verified": "true",
+        "phone_number": "5555555555",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "false",
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "No problem, I will not add any international coverage plans. " ]
+      }, {
+        "text": [ "Is there anything else I can help you with today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "thanks no"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "current",
+        "bill_without_purchase": 54.340000000000003,
+        "cruise_duration": 10,
+        "cruise_plan": "Option 1",
+        "discount": "false",
+        "domestic_coverage": "false",
+        "first_month": "December 01, 2020",
+        "phone_line_verified": "true",
+        "phone_number": "5555555555",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "false",
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "small_talk.thanks"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "You're very welcome!" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607565786,
+    "nanos": 478097000
+  }
+}

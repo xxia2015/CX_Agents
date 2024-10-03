@@ -1,0 +1,51 @@
+{
+  "name": "a15b1513-9398-4539-ab25-3832fe94ac56",
+  "displayName": "Router Placement",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Please follow these guidelines for optimal router placements.\n1. Make sure your router is away from other electronic devices.\n2. Routers tend to spread signal downward, so it's best to mount the router as high as possible to maximize coverage.\n3. Routers send the signal out in all directions, so it’s better if you install it in a central location.\nDid that resolve the issue?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Confirm Service - Yes",
+    "name": "e8a48043-5789-461b-ae40-9353eb7cf289"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay, have a nice day! " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "314a7c99-2001-4909-bdae-c584513fe163"
+  }, {
+    "condition": "$session.params.router_placement = \"true\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Please follow these guidelines for optimal router placements.\n1. Make sure your router is away from other electronic devices.\n2. Routers tend to spread signal downward, so it's best to mount the router as high as possible to maximize coverage.\n3. Routers send the signal out in all directions, so it’s better if you install it in a central location. Did that resolve the issue?\n" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Confirm Service - Yes",
+    "name": "9d7980a4-f372-4bd8-baae-059b276946bd"
+  }, {
+    "condition": "$session.params.WiFi_issue = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Service - Yes",
+    "name": "1bc73f4c-5fa3-4ea0-83a5-078916699da3"
+  } ]
+}

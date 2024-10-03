@@ -1,0 +1,85 @@
+{
+  "name": "6e34af33-8ef5-43e6-b59c-629173b4dd32",
+  "displayName": "Anything else?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay, have a great day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "e1bf812c-dbda-45e3-9063-88cd6f932a32"
+  }, {
+    "intent": "small_talk.goodbye",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay, have a great day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "df7cb90d-e97d-45eb-a71a-236bbe82a56f"
+  }, {
+    "intent": "small_talk.thanks",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay, have a great day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "803cfbd2-e77a-45ee-bd24-9b82c68c701f"
+  }, {
+    "intent": "phone_plan.travel_plan_add",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Travel Plan",
+    "name": "ecae7e65-aa8d-479b-8e5e-0a3175150f5a"
+  }, {
+    "intent": "phone_plan.cruise_plan_add",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Cruise Plan",
+    "name": "794d3d1f-5a8b-4304-98d9-b433c936d10c"
+  }, {
+    "condition": "$session.params.agent_redirect = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "47662054-8ab0-4b25-bd79-ea4fb25a190d"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Is there anything else I can help you with?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "75d57c85-8209-4854-85bd-66458c6cfce5"
+  } ],
+  "transitionRouteGroups": [ "General FAQ", "Bill Reduction", "Plan Questions", "Troubleshoot" ]
+}

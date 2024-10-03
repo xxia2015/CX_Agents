@@ -1,0 +1,317 @@
+{
+  "name": "7dc3595d-0563-4d8d-996f-b3166079bbbb",
+  "tags": [ "#monthly_plan" ],
+  "displayName": "Happy path - Travel - offered monthly plan - asking for cheaper options ",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "travel plan"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "phone_plan.travel_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+      }, {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "2222222222"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "domestic_coverage": "false",
+        "phone_line_verified": "true",
+        "phone_number": "2222222222"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "What country will you be visiting?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "France"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "destination": "France",
+        "domestic_coverage": "false",
+        "phone_line_verified": "true",
+        "phone_number": "2222222222"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "When will you get there?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "tomorrow"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 10,
+          "month": 12,
+          "year": 2020
+        },
+        "destination": "France",
+        "domestic_coverage": "false",
+        "phone_line_verified": "true",
+        "phone_number": "2222222222"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "How many days are you there for?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "11"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 10,
+          "month": 12,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 110,
+        "destination": "France",
+        "domestic_coverage": "false",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "phone_number": "2222222222",
+        "suggested_plan": "monthly",
+        "trip_duration": 11
+      },
+      "currentPage": {
+        "name": "Add Monthly Plan",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "The cheapest available plan for you is the monthly plan. If you choose this plan, you will get ##GB of data for $XX per month." ]
+      }, {
+        "text": [ "Would you like to add this plan?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "any cheaper option?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 10,
+          "month": 12,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 110,
+        "destination": "France",
+        "domestic_coverage": "false",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "phone_number": "2222222222",
+        "suggested_plan": "monthly",
+        "trip_duration": 11
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.cheaper_plan_options"
+      },
+      "currentPage": {
+        "name": "Add Monthly Plan",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "This is the cheapest option given your destination and trip length." ]
+      }, {
+        "text": [ "Would you like to add this plan?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 10,
+          "month": 12,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 110,
+        "destination": "France",
+        "domestic_coverage": "false",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "phone_number": "2222222222",
+        "suggested_plan": "monthly",
+        "trip_duration": 11
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "Great! This plan has been added to your account." ]
+      }, {
+        "text": [ "Did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 10,
+          "month": 12,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 110,
+        "destination": "France",
+        "domestic_coverage": "false",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "phone_number": "2222222222",
+        "suggested_plan": "monthly",
+        "trip_duration": 11
+      },
+      "triggeredIntent": {
+        "name": "small_talk.thanks"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "You're welcome! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "small_talk.thanks"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "You're very welcome!" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607570698,
+    "nanos": 710073000
+  }
+}

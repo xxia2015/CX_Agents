@@ -1,0 +1,168 @@
+{
+  "name": "a92279d6-3c2f-47e3-ab01-19f11f62f2c5",
+  "tags": [ "#new_line" ],
+  "displayName": "Happy path - Plan Questions - new line ",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I was wondering how much more I would need to pay if I added another mobile line to our plan."
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "newline": "true"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.new_line_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "2345678"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "newline": "true",
+        "phone_number": "2345678"
+      },
+      "currentPage": {
+        "name": "New line Info",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. If I were to add another line to your plan with all of the same access and limits, your total plan would come out to $100 plus tax. This is a $15 increase. Would you like to add that line?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": " Is that a $15 increase per month? "
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "newline": "true",
+        "phone_number": "2345678",
+        "unit-currency": {
+          "amount": 15,
+          "currency": "USD",
+          "original": "$15"
+        }
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.charge_type"
+      },
+      "currentPage": {
+        "name": "New line Info",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "The $15 increase is a monthly charge. Would you like to add that line?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": " Yes, please."
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "newline": "true",
+        "phone_number": "2345678",
+        "unit-currency": {
+          "amount": 15,
+          "currency": "USD",
+          "original": "$15"
+        }
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Great. I’ve added that line to your account. You will receive an email with your updated account plan." ]
+      }, {
+        "text": [ "Is there anything else I can help you with today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Great, thank you."
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "newline": "true",
+        "phone_number": "2345678",
+        "unit-currency": {
+          "amount": 15,
+          "currency": "USD",
+          "original": "$15"
+        }
+      },
+      "triggeredIntent": {
+        "name": "small_talk.thanks"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "You’re welcome, have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606138353,
+    "nanos": 481683000
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "name": "2f4bcdb3-2bd4-4eb3-b6df-5eb5284c9d48",
+  "tags": [ "#wifi_replacement_worked" ],
+  "displayName": "Happy path - Troubleshoot - router placement works ",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "can you help me with a router issue please"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "outage_issue": "false",
+        "password_change": "false",
+        "router_issue": "false",
+        "router_placement": "true"
+      },
+      "triggeredIntent": {
+        "name": "troubleshoot.router_placement"
+      },
+      "currentPage": {
+        "name": "Confirm Service - Yes",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Sure, Let me help you with that." ]
+      }, {
+        "text": [ "Please follow these guidelines for optimal router placements.\n1. Make sure your router is away from other electronic devices.\n2. Routers tend to spread signal downward, so it's best to mount the router as high as possible to maximize coverage.\n3. Routers send the signal out in all directions, so it’s better if you install it in a central location. Did that resolve the issue?\n" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes!"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "outage_issue": "false",
+        "password_change": "false",
+        "router_issue": "false",
+        "router_placement": "true"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "I'm glad it helped." ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "bye"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "outage_issue": "false",
+        "password_change": "false",
+        "router_issue": "false",
+        "router_placement": "true"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.goodbye"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Okay, have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "small_talk.thanks"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Of course!" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607620247,
+    "nanos": 193463000
+  }
+}

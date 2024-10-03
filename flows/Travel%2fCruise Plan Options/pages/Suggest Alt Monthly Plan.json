@@ -1,0 +1,72 @@
+{
+  "name": "e7a81e46-2113-454b-bbc7-5c3120966cfd",
+  "displayName": "Suggest Alt Monthly Plan",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "We have another monthly plan option. It includes ##GB for $XX per month." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Monthly Plan Added",
+    "name": "5f36be71-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Alright, I will not add any plans to your account." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "5f36be72-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.cheaper_plan_options",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Add Monthly Plan",
+    "name": "5f36be73-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.other_options",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "These are the only options based on your destination." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be74-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.first_option",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Monthly Plan Added",
+    "name": "61b46026-ad04-4c1b-9d47-a3676bf66375"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Would you like to add this plan?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be75-0000-210f-859a-f403043d09f0"
+  } ],
+  "transitionRouteGroups": [ "Monthly Plan" ]
+}

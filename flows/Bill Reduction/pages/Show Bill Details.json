@@ -1,0 +1,23 @@
+{
+  "name": "94f9e920-81c1-48b1-a06c-624d829a83c6",
+  "displayName": "Show Bill Details",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Ok, your $session.params.bill_state bill.\nI can check your bill to see what might have caused the discrepancy.\nOn $session.params.first_month, it looks like \"$session.params.purchase\" was purchased for a sum of $$session.params.purchase_amount." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Anything else?",
+    "name": "141d6ce1-28b2-4d22-a261-234a6622f960"
+  } ]
+}

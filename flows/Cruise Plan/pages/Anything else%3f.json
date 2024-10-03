@@ -1,0 +1,96 @@
+{
+  "name": "0fe63087-a029-4979-b778-a0d18649c7d0",
+  "displayName": "Anything else?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "5f36be2d-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "small_talk.agent_redirect",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "5f36be2e-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "small_talk.thanks",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You're welcome! Have a great day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "5f36be2f-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure thing! Have a great day." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "5f36be30-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.activation_fee",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "There is no activation charge for this plan." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be31-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.travel_plan_add",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Travel Plan",
+    "name": "0f7d63fb-872e-43a3-8329-17d1065cf447"
+  }, {
+    "condition": "$session.params.agent_redirect = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "90f0afa4-ce81-4168-8368-429ef5028f8c"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Is there anything else I can help you with today?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be32-0000-210f-859a-f403043d09f0"
+  } ],
+  "transitionRouteGroups": [ "Bill Reduction", "Plan Questions", "Troubleshoot", "General FAQ" ]
+}

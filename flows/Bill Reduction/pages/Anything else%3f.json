@@ -1,0 +1,132 @@
+{
+  "name": "2a478955-2e1d-484b-83f5-0aa6119fec65",
+  "displayName": "Anything else?",
+  "form": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "bill_reduction.current_service_cancellation",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Unfortunately this fee is not refundable but it won’t be on your next bill, I double checked. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "ca62a441-720d-4d9a-af03-9decfc7013cf"
+  }, {
+    "intent": "small_talk.goodbye",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay, have a great day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "0087d798-2201-4b0f-a9a8-9d795c86f521"
+  }, {
+    "intent": "bill_reduction.paymentcharge_type",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Your purchase of \"$session.params.purchase\" is a $session.params.payment_type charge. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "8ad0dce9-d271-4184-9797-57f62d1826f0"
+  }, {
+    "intent": "small_talk.thanks",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay, have a great day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "2234bc3b-4c78-4be1-9e0f-034f7fa52254"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay, have a great day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "dfb61c2a-c85b-4359-8739-e4aa2056c967"
+  }, {
+    "intent": "bill_reduction.unfamiliar_charge",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I'm sorry to hear that. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "1a6a70af-aedf-4875-b75f-2e921060fe2a"
+  }, {
+    "intent": "phone_plan.travel_plan_add",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Travel Plan",
+    "name": "7e8dcb35-a40d-4dd7-b79c-f776951cb532"
+  }, {
+    "intent": "phone_plan.cruise_plan_add",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Cruise Plan",
+    "name": "ddd3a72f-2b72-4af2-9ca4-d39aa1178332"
+  }, {
+    "intent": "small_talk.agent_redirect",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure thing." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "0aed9d5b-c998-4aa3-8243-91e153d46c7c"
+  }, {
+    "condition": "$session.params.agent_redirect = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "982c9776-4c55-4024-b44d-6af90cfe9d0c"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Is there anything else I can help you with?" ]
+        },
+        "languageCode": "en"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "discount",
+        "value": "false"
+      } ]
+    },
+    "name": "bb23b51c-e713-4db1-bfb2-2bad59074a21"
+  } ],
+  "transitionRouteGroups": [ "Bill Reduction FAQ", "Plan Questions", "Troubleshoot", "General FAQ" ]
+}

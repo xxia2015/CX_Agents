@@ -1,0 +1,16 @@
+{
+  "name": "8de74863-f161-4bff-b9c6-bb0d2d1ee1ff",
+  "displayName": "bill_reduction.initiate",
+  "parameters": [ {
+    "id": "product_line",
+    "entityType": "@product-line"
+  }, {
+    "id": "bill_amount",
+    "entityType": "@sys.unit-currency"
+  }, {
+    "id": "bill_state",
+    "entityType": "@bill-state"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 27
+}

@@ -1,0 +1,32 @@
+{
+  "name": "8b1b561d-5c2d-48b9-94a7-624970351d23",
+  "tags": [ "#error_handling_no_match" ],
+  "displayName": "Error handling - unrelated head-intent",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "can I make a payment arrangement please"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "I missed what you said. What was that?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606864096,
+    "nanos": 649003000
+  }
+}

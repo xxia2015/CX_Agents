@@ -1,0 +1,204 @@
+{
+  "name": "4a4fe3d2-e283-43a7-b076-bf2b3db34a8d",
+  "tags": [ "#cancel_device_protection_yes" ],
+  "displayName": "Happy path - Plans - asks about current plan - asks about bill reduction - removes device protection ",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "can you check what plan I currently have please?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "current_plan": "true"
+      },
+      "triggeredIntent": {
+        "name": "faq.plan.current_plan"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1111111111"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "current_plan": "true",
+        "phone_number": "1111111111"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Your plan is currently XX including one mobile line." ]
+      }, {
+        "text": [ "Is there anything else I can help you with today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "is there a way I can save some mone on another plan"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "current_plan": "true",
+        "phone_number": "1111111111",
+        "save_bill": "true"
+      },
+      "triggeredIntent": {
+        "name": "bill_reduction.save_bill"
+      },
+      "currentPage": {
+        "name": "Check Bill Saver",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Sure. We have two options for you. " ]
+      }, {
+        "text": [ "Option 1 where we can disconnect device protection, which was added to your plan when signing on. " ]
+      }, {
+        "text": [ "Option 2  would be to add the cheapest available plan so that your bill will be reduced by $XX per month. " ]
+      }, {
+        "text": [ "Which option would you like to pursue?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "current_plan": "true",
+        "phone_number": "1111111111",
+        "save_bill": "true",
+        "save_bill_option": "Option 1"
+      },
+      "currentPage": {
+        "name": "Reprompt Service Cancellation",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "You wish to cancel the device protection that your plan uses.\nCan you confirm again?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "current_plan": "true",
+        "discount": "false",
+        "phone_number": "1111111111",
+        "save_bill": "true",
+        "save_bill_option": "Option 1"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Ok, your new bill will be $54.34 starting next month. " ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "current_plan": "true",
+        "discount": "false",
+        "phone_number": "1111111111",
+        "save_bill": "true",
+        "save_bill_option": "Option 1"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607548624,
+    "nanos": 388280000
+  }
+}

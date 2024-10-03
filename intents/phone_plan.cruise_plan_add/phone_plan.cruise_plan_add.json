@@ -1,0 +1,13 @@
+{
+  "name": "374856b9-fb1f-43c6-9664-0a097b407e52",
+  "displayName": "phone_plan.cruise_plan_add",
+  "parameters": [ {
+    "id": "destination",
+    "entityType": "@extended-countries"
+  }, {
+    "id": "cruise_duration",
+    "entityType": "@sys.number-integer"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 34
+}

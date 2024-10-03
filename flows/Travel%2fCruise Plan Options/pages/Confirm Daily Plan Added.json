@@ -1,0 +1,23 @@
+{
+  "name": "0cf5ec87-60f4-42fe-b4d7-ce7343f1ace3",
+  "displayName": "Confirm Daily Plan Added",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Great! The daily plan has been added to your account." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Anything else?",
+    "name": "5f36be60-0000-210f-859a-f403043d09f0"
+  } ]
+}

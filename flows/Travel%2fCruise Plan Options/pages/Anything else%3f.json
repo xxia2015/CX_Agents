@@ -1,0 +1,102 @@
+{
+  "name": "06d7bb29-de23-47ac-9f2a-473843dc9379",
+  "displayName": "Anything else?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "0d08614a-1526-4d6e-9a94-02214860afea"
+  }, {
+    "intent": "small_talk.agent_redirect",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "d54c3865-74d5-4e7b-b5e0-4801756f4b5d"
+  }, {
+    "intent": "small_talk.thanks",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You're welcome! Have a great day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "1fe821ce-9d79-4cd0-998f-dd45a50d7375"
+  }, {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure, please go ahead." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "a85ad0f1-55b5-438d-b952-ef3a789ad237"
+  }, {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "479d77b7-dfa1-4235-86a4-a2e0bc746a49"
+  }, {
+    "intent": "phone_plan.travel_plan_add",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Travel Plan",
+    "name": "ca055d70-cc57-42e4-87c4-33fd56c90a98"
+  }, {
+    "intent": "phone_plan.cruise_plan_add",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Cruise Plan",
+    "name": "293c99ea-d207-4e0e-8c40-d6db08a38ac5"
+  }, {
+    "condition": "$session.params.agent_redirect = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "febf1ce4-ce92-4420-afc1-548781892186"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Did you have any other questions?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "cc69ccff-08cf-4f08-8b8a-a714a19ce12c"
+  } ],
+  "transitionRouteGroups": [ "Monthly Plan", "Troubleshoot", "Bill Reduction", "General FAQ", "Plan Questions" ]
+}

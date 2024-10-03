@@ -1,0 +1,249 @@
+{
+  "name": "eab2207a-757c-4b0d-9288-7c752dccc6d9",
+  "tags": [ "#monthly_plan" ],
+  "displayName": "Happy path - Travel - adds monthly plan",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "add travel plan"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "phone_plan.travel_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+      }, {
+        "text": [ "Can I get the last four digits of the phone line you'll be taking with you?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "What country will you be visiting?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "france"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "destination": "France",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "When will you arrive?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "tomorrow"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 30,
+          "month": 11,
+          "year": 2020
+        },
+        "destination": "France",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "How many days are you there for?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "eleven"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 30,
+          "month": 11,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 110,
+        "destination": "France",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 11
+      },
+      "currentPage": {
+        "name": "Add Monthly Plan",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "The cheapest available plan for you is the monthly plan. If you choose this plan, you will get ##GB of data for $XX per month." ]
+      }, {
+        "text": [ "Would you like to add this plan?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "sure"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 30,
+          "month": 11,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 110,
+        "destination": "France",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 11
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "Great! This plan has been added to your account." ]
+      }, {
+        "text": [ "Did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "nope"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 30,
+          "month": 11,
+          "year": 2020
+        },
+        "coverage": "both",
+        "daily_cost": 110,
+        "destination": "France",
+        "domestic_coverage": "true",
+        "last_four": "1234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 11
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606684815,
+    "nanos": 849354000
+  }
+}

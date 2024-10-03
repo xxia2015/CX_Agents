@@ -1,0 +1,23 @@
+{
+  "name": "c9a6035d-85ec-4d08-96e6-af2652599233",
+  "displayName": "Trigger Cruise Plan Info",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Alright, let me pull up the available cruise packages for $session.params.cruise_duration days." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Cruise Package Info",
+    "name": "5f36be3a-0000-210f-859a-f403043d09f0"
+  } ]
+}

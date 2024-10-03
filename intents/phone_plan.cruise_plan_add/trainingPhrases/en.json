@@ -1,0 +1,231 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Please add cruise plan to all my wireless phone lines.",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How do I remain connected with my family while I am on a cruise vacation? Do I need "
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Please make my current phone work on a cruise for 8 days."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We are going on a honeymoon trip to Hawaii! Can we have some kind of a cruise phone plan for 6 days?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I make use of the remaining minutes on my current phone plan while I am on a cruise?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "May I get cruise pass on my phone for the the next 7 days?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need to add cruise plan to my phone temporariliy."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Will my current phone work on cruise ship? Do I need to take a special plan?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I want to use my phone on a cruise ship. Do you have any recommendations?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you expand my coverage to cruise ships for the next 1 week?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is my phone capable of working while on a cruise?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Is  there a cruise ship calling package for my phone?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I use text and data while on a cruise"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm taking Norwegian Cruise line for about 6 days. Is there a special phone plan I could use?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Any mobile phone service while I'm on a cruise vacation?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How to use my cell phone ona cruise liner?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "How do I avoid roaming charges on a cruise?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can I get cruise phone plan for 5 days?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you make my phone work on Carnival cruise? I will be on it for the next 1 week!"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "We are going on a Cruise vacation to Hawaii!! How will I make my phone work on a cruise?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": " please :)"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": " Yay! Could you add cruise pass"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am going on a Disney cruise to Bahamas"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I will be on a Princess cruise from 11th to 17th. Please include travel pass on my phone."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I am taking Royal caribbean Cruise for the next 7 days. Can you add travel pass to my phone?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "how do I make my phone work in a Cruise ship?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm going on a cruise and need a package for my 4 days there"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need coverage for a cruise I'm going on to greece"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "going on a cruise to barbados for 3 days"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i'm taking a cruise to puerto vallarta and want to be able to use my "
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "i'm taking a cruise to "
+    }, {
+      "text": "puerto vallarta",
+      "parameterId": "destination"
+    }, {
+      "text": " and want to be able to use my phone"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "going on a cruise to "
+    }, {
+      "text": "barbados",
+      "parameterId": "destination"
+    }, {
+      "text": " for "
+    }, {
+      "text": "3",
+      "parameterId": "cruise_duration"
+    }, {
+      "text": " days"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I need coverage for a cruise I'm going on to "
+    }, {
+      "text": "greece",
+      "parameterId": "destination"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "I'm going on a cruise and need a package for my "
+    }, {
+      "text": "4",
+      "parameterId": "cruise_duration"
+    }, {
+      "text": " days there"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  } ]
+}

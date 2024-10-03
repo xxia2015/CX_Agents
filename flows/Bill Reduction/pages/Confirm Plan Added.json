@@ -1,0 +1,23 @@
+{
+  "name": "c392b385-34ad-4dff-ae63-368f3182a5b6",
+  "displayName": "Confirm Plan Added",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Great! I changed your plan so your new bill will be $XX starting next month." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Anything else?",
+    "name": "d03d84ae-68d5-4c43-b84b-b16c7e6e1837"
+  } ]
+}

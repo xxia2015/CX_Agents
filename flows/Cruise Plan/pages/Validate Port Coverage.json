@@ -1,0 +1,31 @@
+{
+  "name": "9a093029-ae8d-4907-a235-2e4e8e647fec",
+  "displayName": "Validate Port Coverage",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.port_is_covered = \"true\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Great news! $session.params.destination has free coverage on land. You're all set." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "5f36be37-0000-210f-859a-f403043d09f0"
+  }, {
+    "condition": "$session.params.port_is_covered = \"false\"",
+    "triggerFulfillment": {
+      "webhook": "cxPrebuiltAgentsTelecom",
+      "tag": "internationalCoverage"
+    },
+    "targetFlow": "Travel/Cruise Plan Options",
+    "name": "5f36be38-0000-210f-859a-f403043d09f0"
+  } ]
+}

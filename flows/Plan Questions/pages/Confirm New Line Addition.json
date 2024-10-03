@@ -1,0 +1,23 @@
+{
+  "name": "c00f4c3b-e0d3-447b-956c-1d6f50c8df36",
+  "displayName": "Confirm New Line Addition",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Great. I've added a new line with the phone number XXX-XXX-XXXX to your account. You will receive an email shortly with all the updated details." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Anything else?",
+    "name": "3f8e20e6-8e63-44c7-a3b2-92ede3e908c2"
+  } ]
+}

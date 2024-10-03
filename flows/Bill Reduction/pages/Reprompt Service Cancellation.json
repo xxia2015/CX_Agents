@@ -1,0 +1,46 @@
+{
+  "name": "01ae3561-e01f-4560-b4bd-a43b6992b716",
+  "displayName": "Reprompt Service Cancellation",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "You would like to cancel device protection on your account. Is that correct?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Service Cancellation",
+    "name": "05674e63-fc57-4f3a-99a0-66a21a20519e"
+  }, {
+    "intent": "bill_reduction.paymentcharge_type",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Your purchase of device protection is a recurring charge. Would you like to stop using that to reduce the amount?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "1b27eee8-fa03-4d94-9b6e-2ec8b1928997"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure thing!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "28e289d6-db91-48ac-9412-3a79270ab77e"
+  } ]
+}

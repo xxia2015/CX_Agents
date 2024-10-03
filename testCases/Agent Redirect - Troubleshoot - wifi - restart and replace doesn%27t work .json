@@ -1,0 +1,192 @@
+{
+  "name": "a15354ff-142c-4214-b069-4c2c18539ca4",
+  "tags": [ "#agent_redirect", "#wifi_replacement_didn't_work", "#wifi_restart_didn't_work" ],
+  "displayName": "Agent Redirect - Troubleshoot - wifi - restart and replace doesn't work ",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "wifi isn't working"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_issue": "true"
+      },
+      "triggeredIntent": {
+        "name": "troubleshoot.router_issue"
+      },
+      "currentPage": {
+        "name": "Collect Zip Code",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "I’m sorry to hear that. Can you please tell me your current zip code so that I can help you with the problem?" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "94401"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_issue": "true",
+        "zip_code": "94401"
+      },
+      "currentPage": {
+        "name": "Power Outage - No",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Looks like there are no outages in the area. I can help with restarting your router. Do you want to give it a try?" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "sure"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_issue": "true",
+        "zip_code": "94401"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Router Reset",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Please find your router and press the restart button for at least 20 seconds. You will lose your connection completely for a few minutes, but it should reset connectivity once it's been restarted. Did that resolve the issue?" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "injectedParameters": {
+        "router_placement": true
+      },
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_issue": "true",
+        "router_placement": true,
+        "zip_code": "94401"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Confirm Service - Yes",
+        "flow": "Troubleshoot "
+      },
+      "textResponses": [ {
+        "text": [ "Okay, seems like there is a problem with your router placement. Let me suggest an optimal place.\n" ]
+      }, {
+        "text": [ "Please follow the following guidelines for optimal router placements.\n1. Make sure your router is away from other electronic devices.\n2. Routers tend to spread signal downward, so it's best to mount the router as high as possible to maximize coverage.\n3. Routers send the signal out in all directions, so it’s better if you install it in a central location. Did that resolve the issue?\n" ]
+      } ],
+      "currentFlow": {
+        "name": "Troubleshoot "
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_issue": "true",
+        "router_placement": true,
+        "zip_code": "94401"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Speak to an Agent",
+        "flow": "Speak to an Agent"
+      },
+      "textResponses": [ {
+        "text": [ "I am so sorry to hear that. " ]
+      }, {
+        "text": [ "I will connect you to an agent. " ]
+      }, {
+        "text": [ "Before I transfer you, did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Speak to an Agent"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "router_issue": "true",
+        "router_placement": true,
+        "zip_code": "94401"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Speak to an Agent"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. Please wait while I connect you to an agent." ]
+      } ],
+      "currentFlow": {
+        "name": "Speak to an Agent"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606849488,
+    "nanos": 491072000
+  }
+}

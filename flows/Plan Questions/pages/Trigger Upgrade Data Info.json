@@ -1,0 +1,23 @@
+{
+  "name": "e7c1c0f2-208d-402b-998e-41a179e48eba",
+  "displayName": "Trigger Upgrade Data Info",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Alright, let me pull up the available data plans for you." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Data Usage Info",
+    "name": "38be8699-d628-4bcd-b1c1-c1cfdd1c70a5"
+  } ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "30e70cbb-f347-4ff9-b884-3219ff925ca8",
+  "displayName": "Trigger Unlimited Plans Info",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Alright, let me pull up the available unlimited plans for you." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Unlimited Plans Info",
+    "name": "8d58a746-0db2-4871-8461-83bf8f749828"
+  } ]
+}

@@ -1,0 +1,78 @@
+{
+  "name": "2d1120b8-dee1-44b3-ad01-92d1b4987971",
+  "displayName": "Collect Customer Line",
+  "form": {
+    "parameters": [ {
+      "displayName": "phone_number",
+      "required": true,
+      "entityType": "@sys.phone-number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Let me take a look for you. What is your phone number?" ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn't get that. Could you please enter a valid phone number?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "424de2e0-6ac6-4bdb-b418-d48462252de1"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am sorry. I don't understand.  Please provide a valid phone number." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "f1d73eb8-8b86-4a08-8f9a-21b7d4c87814"
+        } ]
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.newline = \"true\" AND $page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "New line Info",
+    "name": "8530e9d0-db7b-42fa-8033-bc46358a321a"
+  }, {
+    "condition": "$session.params.unlimited = \"true\" AND $page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Trigger Unlimited Plans Info",
+    "name": "9d05d9ff-9975-4693-ba6a-69cf587b5d5b"
+  }, {
+    "condition": "$session.params.dataupgrade = \"true\" AND $page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Trigger Upgrade Data Info",
+    "name": "5aaeb173-74a9-41ee-9bcf-a328a264aed8"
+  }, {
+    "condition": "$session.params.current_plan = \"true\" AND $page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Your plan is currently XX including one mobile line." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "b2acca02-931c-43bd-a21f-efbf4e6a9fd1"
+  } ]
+}

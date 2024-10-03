@@ -1,0 +1,313 @@
+{
+  "name": "0faeeb2f-6b8b-4214-bb87-f0fd4e2a8272",
+  "tags": [ "#pay_per_use" ],
+  "displayName": "Error handling - Travel - no-match - offered pay per use",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi! I'm the virtual telecommunications agent. I can help you resolve billing and plan questions, troubleshoot, and add travel and cruise plans. How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "need a travel plan"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "phone_plan.travel_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+      }, {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1231231234"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "domestic_coverage": "true",
+        "last_four": "1231231234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "What country will you be traveling to?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "greenland"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "destination": "Greenland",
+        "domestic_coverage": "true",
+        "last_four": "1231231234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "When will you get there?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "sunday"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 6,
+          "month": 12,
+          "year": 2020
+        },
+        "destination": "Greenland",
+        "domestic_coverage": "true",
+        "last_four": "1231231234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "How many days will you be spending there?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "not sure yet"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 6,
+          "month": 12,
+          "year": 2020
+        },
+        "destination": "Greenland",
+        "domestic_coverage": "true",
+        "last_four": "1231231234",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Sorry, I didn't get that. Please tell me How many days will you be spending there?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "let's say 10 days then"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 6,
+          "month": 12,
+          "year": 2020
+        },
+        "coverage": "neither",
+        "daily_cost": 100,
+        "destination": "Greenland",
+        "domestic_coverage": "true",
+        "last_four": "1231231234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 10
+      },
+      "currentPage": {
+        "name": "Add Pay Per Use",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "For this destination and duration, you will pay per use. You do not need to add any plan to your line. You will be charged only for the data and minutes you use." ]
+      }, {
+        "text": [ "Would you like to hear more about these rates?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "sure"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 6,
+          "month": 12,
+          "year": 2020
+        },
+        "coverage": "neither",
+        "daily_cost": 100,
+        "destination": "Greenland",
+        "domestic_coverage": "true",
+        "last_four": "1231231234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 10
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, the rates are as follows:" ]
+      }, {
+        "text": [ "Inbound and outbound calls are each $[X.XX]" ]
+      }, {
+        "text": [ "SMS and MMS are $[X.XX]" ]
+      }, {
+        "text": [ "Each GB of data used is $[X.XX]" ]
+      }, {
+        "text": [ "Did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 6,
+          "month": 12,
+          "year": 2020
+        },
+        "coverage": "neither",
+        "daily_cost": 100,
+        "destination": "Greenland",
+        "domestic_coverage": "true",
+        "last_four": "1231231234",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "suggested_plan": "monthly",
+        "trip_duration": 10
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606953915,
+    "nanos": 583824000
+  }
+}

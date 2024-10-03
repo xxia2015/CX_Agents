@@ -1,0 +1,72 @@
+{
+  "name": "4b767084-9b10-4712-8975-40351d4180a1",
+  "displayName": "Add Monthly Plan",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "The cheapest available plan for you is the monthly plan. If you choose this plan, you will get ##GB of data for $XX per month." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Monthly Plan Added",
+    "name": "5f36be62-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Suggest Alt Monthly Plan",
+    "name": "5f36be63-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.cheaper_plan_options",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "This is the cheapest option given your destination and trip length." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be64-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.other_options",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Suggest Alt Monthly Plan",
+    "name": "5f36be65-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "No problem." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "5f36be66-0000-210f-859a-f403043d09f0"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Would you like to add this plan?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be67-0000-210f-859a-f403043d09f0"
+  } ],
+  "transitionRouteGroups": [ "Monthly Plan" ]
+}

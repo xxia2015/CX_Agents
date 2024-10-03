@@ -1,0 +1,15 @@
+{
+  "entities": [ {
+    "value": "TV",
+    "synonyms": [ "TV" ],
+    "languageCode": "en"
+  }, {
+    "value": "Fridge",
+    "synonyms": [ "Fridge" ],
+    "languageCode": "en"
+  }, {
+    "value": "phone",
+    "synonyms": [ "phone" ],
+    "languageCode": "en"
+  } ]
+}

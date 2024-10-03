@@ -1,0 +1,62 @@
+{
+  "name": "b4f52a20-73bb-44a3-91b8-70c271f34076",
+  "displayName": "Validate Line",
+  "form": {
+    "parameters": [ {
+      "displayName": "phone_number",
+      "required": true,
+      "entityType": "@sys.number-sequence",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn't get that. Could you please enter a valid phone number?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "2920e12b-366b-4979-bf7e-8da82fde8b07"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am sorry. I don't understand.  Please provide a valid phone number" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "5431e2c4-59ee-48bc-a99c-f551a70ef8d9"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.phone_line_verified = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect Travel Info",
+    "name": "5f36be56-0000-210f-859a-f403043d09f0"
+  }, {
+    "condition": "$session.params.phone_line_verified = \"false\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I don't see that number in our system." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "5f36be57-0000-210f-859a-f403043d09f0"
+  } ]
+}

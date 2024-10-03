@@ -1,0 +1,28 @@
+{
+  "name": "8d90103f-9907-47a5-b2dd-e5d93a119d17",
+  "displayName": "Confirm Data Upgrade",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Got it. " ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "I've upgraded your data plan to XX. Your new bill will be $XX/month." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Anything else?",
+    "name": "cb95fd5d-703d-4787-9168-c997f0070e0e"
+  } ]
+}

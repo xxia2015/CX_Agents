@@ -1,0 +1,27 @@
+{
+  "name": "dcf52dec-f3ea-44da-aaba-b02ccd9d56bf",
+  "displayName": "Unlimited Plan Supplements",
+  "transitionRoutes": [ {
+    "intent": "phone_plan.activation_fee",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "There is no activation charge associated with this plan." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "a4ad2935-bc28-42da-bcd6-f716cdb703b6"
+  }, {
+    "intent": "phone_plan.includes_sms",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Both SMS and MMS are included." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "dc68986b-a1c2-4198-ac88-ec2ddd76a274"
+  } ]
+}

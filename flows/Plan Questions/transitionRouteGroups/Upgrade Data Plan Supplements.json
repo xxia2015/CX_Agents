@@ -1,0 +1,27 @@
+{
+  "name": "5d5b4daf-f8d8-4296-82d0-c60f377d8dea",
+  "displayName": "Upgrade Data Plan Supplements",
+  "transitionRoutes": [ {
+    "intent": "phone_plan.activation_fee",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "There is no activation charge associated with this data plan upgrade." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "e46a4e60-e612-4006-96ee-20d9b21c6393"
+  }, {
+    "intent": "faq.plan.current_plan",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Your current data plan is XXX Internet service tier which includes XX TB of data per month." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "d1a7a72f-064c-451e-a2f2-96fe79d17d7f"
+  } ]
+}

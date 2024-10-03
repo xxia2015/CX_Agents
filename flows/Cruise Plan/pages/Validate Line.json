@@ -1,0 +1,38 @@
+{
+  "name": "2f6f16d3-3e49-4912-9d60-4591006152d6",
+  "displayName": "Validate Line",
+  "form": {
+    "parameters": [ {
+      "displayName": "phone_number",
+      "entityType": "@sys.number-sequence",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.phone_line_verified = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Collect Cruise Duration",
+    "name": "5f36be33-0000-210f-859a-f403043d09f0"
+  }, {
+    "condition": "$session.params.phone_line_verified = \"false\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sorry, I don't see that number in your account. Customer Service can help you with this.", "I'm sorry, but that number isn't appearing in your account. Customer Service can help you with this." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "5f36be34-0000-210f-859a-f403043d09f0"
+  } ]
+}

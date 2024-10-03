@@ -1,0 +1,83 @@
+{
+  "name": "0d666d5b-a970-468f-b4de-dd6579fa88f4",
+  "displayName": "Data Usage Info",
+  "form": {
+    "parameters": [ {
+      "displayName": "upgrade_data",
+      "required": true,
+      "entityType": "@plan-options",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Which data plan would you like to upgrade to?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "You can choose one of 2 available plans:" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Option 1 includes XX Internet service tier at $[XX] per month, for which you will receive a monthly plan that includes 1.2 TB of data." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Option 2  includes XX Internet service tier at $[XX] per month, for which you will receive a monthly plan that includes 2.4 TB of data." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Got it. I will not upgrade your data plan." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "9590134d-f671-4197-96a0-63288a1f6138"
+  }, {
+    "intent": "phone_plan.cheaper_plan_options",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "The cheapest unlimited plan is Option 2, which has a 2.4 TB of data for only $XX/month. To add it, you can simply say \"Option 2\"." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "0936f355-4635-4570-8493-54edadd01769"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Got it. I will not upgrade your data plan." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "7db8df34-2ec1-4373-ab65-2ce0574a4f58"
+  }, {
+    "condition": "$session.params.upgrade_data = \"Option 1\" OR $session.params.upgrade_data = \"Option 2\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Data Upgrade",
+    "name": "37be1f2f-a7de-4191-bbd5-51602ed965c4"
+  } ],
+  "transitionRouteGroups": [ "Upgrade Data Plan Supplements" ]
+}

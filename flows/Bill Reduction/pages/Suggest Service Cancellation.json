@@ -1,0 +1,41 @@
+{
+  "name": "047e518f-64f6-45ae-a347-955f3cd65a84",
+  "displayName": "Suggest Service Cancellation",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "I see that your phone bill increased from $session.params.last_month to $session.params.bill_month. This was because $session.params.purchase was added when you purchased your new $session.params.product_line.\nWould you like to cancel this service?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Service Cancellation",
+    "name": "f0818f97-05cd-4a13-9a1b-c9500b868780"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "No Service Cancellation",
+    "name": "1c34a6db-503f-467d-b268-19c2ab49627c"
+  }, {
+    "intent": "bill_reduction.paymentcharge_type",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Your purchase of \"$session.params.purchase\" is a recurring charge. Do you want to cancel this service? " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "2a03cf27-dbfa-47b3-836e-1ac78998d13a"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "1458670f-a117-4ce9-afdd-94b1f3c7aedf",
+  "displayName": "cxPrebuiltAgentsTelecom",
+  "genericWebService": {
+    "uri": "https://us-central1-telco-prebuilt-agent.cloudfunctions.net/custom-telco-webhook"
+  },
+  "timeout": {
+    "seconds": 5
+  }
+}

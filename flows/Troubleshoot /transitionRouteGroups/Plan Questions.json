@@ -1,0 +1,56 @@
+{
+  "name": "f7c17a8e-75d9-4375-9ffe-e6f8c16dbafe",
+  "displayName": "Plan Questions",
+  "transitionRoutes": [ {
+    "intent": "phone_plan.upgrade_data",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "dataupgrade",
+        "value": "true"
+      } ]
+    },
+    "targetFlow": "Plan Questions",
+    "name": "a99578ef-c3e8-4629-a34f-240d7bdb706d"
+  }, {
+    "intent": "phone_plan.unlimited_plans",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "unlimited",
+        "value": "true"
+      } ]
+    },
+    "targetFlow": "Plan Questions",
+    "name": "1992dc40-5f3e-4438-95e9-8db315faa751"
+  }, {
+    "intent": "phone_plan.new_line_add",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "newline",
+        "value": "true"
+      } ]
+    },
+    "targetFlow": "Plan Questions",
+    "name": "d73ced2f-a235-4470-a9fa-d5492067b9a9"
+  }, {
+    "intent": "faq.plan.current_plan",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "current_plan",
+        "value": "true"
+      } ]
+    },
+    "targetFlow": "Plan Questions",
+    "name": "efb3003b-6162-41da-bbda-58499c0579b9"
+  }, {
+    "intent": "phone_plan.general_plan_question",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure, I can help you modify your existing plan. Would you like to upgrade your plan or add an unlimited plan?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "f2366a0c-ed18-4254-92a9-ac750cc92971"
+  } ]
+}

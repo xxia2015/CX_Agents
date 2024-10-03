@@ -1,0 +1,379 @@
+{
+  "name": "cf4ceca2-5b61-4b90-a785-c6368d670cae",
+  "tags": [ "#pay_per_use", "#data_option_2" ],
+  "displayName": "Happy path - adds travel plan - upgrades data plan",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "looking for a travel plan"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "phone_plan.travel_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+      }, {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "5555555555"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "domestic_coverage": "false",
+        "phone_line_verified": "true",
+        "phone_number": "5555555555"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "What country will you be traveling to?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "sweden"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "destination": "Sweden",
+        "domestic_coverage": "false",
+        "phone_line_verified": "true",
+        "phone_number": "5555555555"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "When will you arrive?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "10"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "destination": "Sweden",
+        "domestic_coverage": "false",
+        "phone_line_verified": "true",
+        "phone_number": "5555555555"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Sorry, I didn't get that. Please tell me when will you arrive?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "tomorrow"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 8,
+          "month": 12,
+          "year": 2020
+        },
+        "destination": "Sweden",
+        "domestic_coverage": "false",
+        "phone_line_verified": "true",
+        "phone_number": "5555555555"
+      },
+      "currentPage": {
+        "name": "Collect Travel Info",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "How many days are you there for?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "10"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 8,
+          "month": 12,
+          "year": 2020
+        },
+        "coverage": "neither",
+        "daily_cost": 100,
+        "destination": "Sweden",
+        "domestic_coverage": "false",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "phone_number": "5555555555",
+        "suggested_plan": "monthly",
+        "trip_duration": 10
+      },
+      "currentPage": {
+        "name": "Add Pay Per Use",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "For this destination and duration, you will pay per use. You do not need to add any plan to your line. You will be charged only for the data and minutes you use." ]
+      }, {
+        "text": [ "Would you like to hear more about these rates?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "sure"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 8,
+          "month": 12,
+          "year": 2020
+        },
+        "coverage": "neither",
+        "daily_cost": 100,
+        "destination": "Sweden",
+        "domestic_coverage": "false",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "phone_number": "5555555555",
+        "suggested_plan": "monthly",
+        "trip_duration": 10
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, the rates are as follows:" ]
+      }, {
+        "text": [ "Inbound and outbound calls are each $[X.XX]" ]
+      }, {
+        "text": [ "SMS and MMS are $[X.XX]" ]
+      }, {
+        "text": [ "Each GB of data used is $[X.XX]" ]
+      }, {
+        "text": [ "Did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yeah can you also upgrade my data plan?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 8,
+          "month": 12,
+          "year": 2020
+        },
+        "coverage": "neither",
+        "daily_cost": 100,
+        "dataupgrade": "true",
+        "destination": "Sweden",
+        "domestic_coverage": "false",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "phone_number": "5555555555",
+        "suggested_plan": "monthly",
+        "trip_duration": 10
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.upgrade_data"
+      },
+      "currentPage": {
+        "name": "Data Usage Info",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, let me pull up the available data plans for you." ]
+      }, {
+        "text": [ "You can choose one of 2 available plans:" ]
+      }, {
+        "text": [ "Option 1 includes XX Internet service tier at $[XX] per month, for which you will receive a monthly plan that includes 1.2 TB of data" ]
+      }, {
+        "text": [ "Option 2  includes XX Internet service tier at $[XX] per month, for which you will receive a monthly plan that includes 2.4 TB of data" ]
+      }, {
+        "text": [ "Which data plan would you like to upgrade to?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "option 2 sounds good"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 8,
+          "month": 12,
+          "year": 2020
+        },
+        "coverage": "neither",
+        "daily_cost": 100,
+        "dataupgrade": "true",
+        "destination": "Sweden",
+        "domestic_coverage": "false",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "phone_number": "5555555555",
+        "suggested_plan": "monthly",
+        "trip_duration": 10,
+        "upgrade_data": "Option 2"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. " ]
+      }, {
+        "text": [ "I've upgraded your data plan to XX. Your new bill will be $XX/month." ]
+      }, {
+        "text": [ "Is there anything else I can help you with today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_date": {
+          "day": 8,
+          "month": 12,
+          "year": 2020
+        },
+        "coverage": "neither",
+        "daily_cost": 100,
+        "dataupgrade": "true",
+        "destination": "Sweden",
+        "domestic_coverage": "false",
+        "monthly_cost": 70,
+        "phone_line_verified": "true",
+        "phone_number": "5555555555",
+        "suggested_plan": "monthly",
+        "trip_duration": 10,
+        "upgrade_data": "Option 2"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607358721,
+    "nanos": 674207000
+  }
+}

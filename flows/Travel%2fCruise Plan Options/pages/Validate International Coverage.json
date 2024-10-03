@@ -1,0 +1,35 @@
+{
+  "name": "c8e5f308-4125-4499-a2a7-e7cbb72d42c4",
+  "displayName": "Validate International Coverage",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.coverage = \"monthly_only\"",
+    "triggerFulfillment": {
+      "webhook": "cxPrebuiltAgentsTelecom",
+      "tag": "cheapestPlan"
+    },
+    "targetPage": "Add Monthly Plan",
+    "name": "5f36be6e-0000-210f-859a-f403043d09f0"
+  }, {
+    "condition": "$session.params.coverage = \"neither\"",
+    "triggerFulfillment": {
+      "webhook": "cxPrebuiltAgentsTelecom",
+      "tag": "cheapestPlan"
+    },
+    "targetPage": "Add Pay Per Use",
+    "name": "5f36be6f-0000-210f-859a-f403043d09f0"
+  }, {
+    "condition": "$session.params.coverage = \"both\"",
+    "triggerFulfillment": {
+      "webhook": "cxPrebuiltAgentsTelecom",
+      "tag": "cheapestPlan"
+    },
+    "targetPage": "Suggested Plan Transitions",
+    "name": "5f36be70-0000-210f-859a-f403043d09f0"
+  } ]
+}

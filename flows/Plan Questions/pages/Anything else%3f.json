@@ -1,0 +1,130 @@
+{
+  "name": "cefed5e1-a272-4086-832c-a7c0acffc858",
+  "displayName": "Anything else?",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.thanks",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "You’re welcome, have a great day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "5d0b0374-e781-4cd0-8b52-abe5e49b29b9"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "90877ca2-f780-42e2-bc44-47caf985e32f"
+  }, {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure thing! Have a great day." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "3f9f8682-cd1e-4405-be9b-ab5cd16409ad"
+  }, {
+    "intent": "phone_plan.activation_fee",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "There is no activation charge for this plan." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "8323a5fd-c4d8-4469-a29f-281e2ba000af"
+  }, {
+    "intent": "small_talk.agent_redirect",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure thing." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "39e9a71b-d265-4bbd-b69b-b6642fa50f66"
+  }, {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Yes, please go ahead!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "1e6631e9-7950-4fcc-956d-0a1fdfab9ad2"
+  }, {
+    "intent": "phone_plan.travel_plan_add",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetFlow": "Travel Plan",
+    "name": "6dd9015b-0b4a-456b-87e4-5011979e7593"
+  }, {
+    "intent": "phone_plan.cruise_plan_add",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Cruise Plan",
+    "name": "3dfe90cc-49be-456d-b923-0df05590695a"
+  }, {
+    "intent": "phone_plan.new_number",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Your updated number after the new line addition is XXXXXX." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "bf2b1b1f-ecb3-4a06-9ede-fb4d0150b89f"
+  }, {
+    "condition": "$session.params.agent_redirect = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Speak to an Agent",
+    "name": "4ec734c3-9ddf-45cc-acb2-ec1dc0bc5d23"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Is there anything else I can help you with today?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "c4e16fb4-11cf-417a-a3bb-6de75ad8b986"
+  } ],
+  "transitionRouteGroups": [ "Bill Reduction", "Troubleshoot", "Plan Questions", "General FAQ" ]
+}

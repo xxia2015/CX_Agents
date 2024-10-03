@@ -1,0 +1,57 @@
+{
+  "name": "18df59e1-e0da-43b1-bdc8-bc2914a690bd",
+  "displayName": "Validate Domestic Coverage",
+  "form": {
+    "parameters": [ {
+      "displayName": "destination",
+      "entityType": "@extended-countries",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    }, {
+      "displayName": "arrival_date",
+      "entityType": "@sys.date",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    }, {
+      "displayName": "trip_duration",
+      "entityType": "@sys.number-integer",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.domestic_coverage = \"true\" AND ($session.params.destination = \"Mexico\" OR $session.params.destination = \"Canada\")",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Great news! You are covered! There is no further action needed on your part." ]
+        },
+        "languageCode": "en"
+      } ],
+      "webhook": "cxPrebuiltAgentsTelecom",
+      "tag": "internationalCoverage"
+    },
+    "targetPage": "Anything else?",
+    "name": "5f36be53-0000-210f-859a-f403043d09f0"
+  }, {
+    "condition": "$session.params.domestic_coverage = \"false\" OR $session.params.domestic_coverage = \"true\"",
+    "triggerFulfillment": {
+      "webhook": "cxPrebuiltAgentsTelecom",
+      "tag": "internationalCoverage"
+    },
+    "targetFlow": "Travel/Cruise Plan Options",
+    "name": "5f36be54-0000-210f-859a-f403043d09f0"
+  } ]
+}

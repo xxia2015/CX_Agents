@@ -1,0 +1,16 @@
+{
+  "name": "bea2dbd8-1706-4eb1-b56d-d0ca32350343",
+  "displayName": "phone_plan.travel_plan_add",
+  "parameters": [ {
+    "id": "destination",
+    "entityType": "@extended-countries"
+  }, {
+    "id": "trip_duration",
+    "entityType": "@sys.number-integer"
+  }, {
+    "id": "date-period",
+    "entityType": "@sys.date-period"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 44
+}

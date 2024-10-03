@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "current",
+    "synonyms": [ "recent", "current", "this month", "this" ],
+    "languageCode": "en"
+  }, {
+    "value": "previous",
+    "synonyms": [ "previous", "past", "last month", "last" ],
+    "languageCode": "en"
+  } ]
+}

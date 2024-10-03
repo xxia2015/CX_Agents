@@ -1,0 +1,27 @@
+{
+  "name": "e67c08dc-4e3a-4059-ae64-bdbc45c783b3",
+  "displayName": "Travel Supplementals",
+  "transitionRoutes": [ {
+    "intent": "phone_plan.includes_sms",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Both SMS and MMS are included." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be5a-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.activation_fee",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Because you are covered, there is no activation needed or associated charge. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be5b-0000-210f-859a-f403043d09f0"
+  } ]
+}

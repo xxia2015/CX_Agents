@@ -1,0 +1,77 @@
+{
+  "name": "d33e7ec6-91ae-4309-abf8-7701e4a68f1d",
+  "displayName": "Collect Port",
+  "form": {
+    "parameters": [ {
+      "displayName": "destination",
+      "required": true,
+      "entityType": "@extended-countries",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "May I ask you which port you will be stopping at?", "What port will you be stopping at?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    }, {
+      "displayName": "trip_duration",
+      "required": true,
+      "entityType": "@sys.cardinal",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "And, how many days are you spending there?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "While on your cruise, you may also need coverage on land." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "No problem, I will not add any international coverage plans. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "5f36be3b-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "small_talk.thanks",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Alright, I will not add any international coverage plans. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "5f36be3c-0000-210f-859a-f403043d09f0"
+  }, {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+      "webhook": "cxPrebuiltAgentsTelecom",
+      "tag": "cruisePlanCoverage"
+    },
+    "targetPage": "Validate Port Coverage",
+    "name": "5f36be3d-0000-210f-859a-f403043d09f0"
+  } ],
+  "transitionRouteGroups": [ "Cruise Supplementals" ]
+}

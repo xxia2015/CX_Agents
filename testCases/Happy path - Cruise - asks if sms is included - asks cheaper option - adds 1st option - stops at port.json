@@ -1,0 +1,353 @@
+{
+  "name": "1b6567a5-d4a6-40e1-9ea3-892db18ce4f5",
+  "tags": [ "#cruise_option_1", "#port_stop", "#pay_per_use" ],
+  "displayName": "Happy path - Cruise - asks if sms is included - asks cheaper option - adds 1st option - stops at port",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "going on a cruise and need a plan"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "phone_plan.cruise_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1111111111"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "domestic_coverage": "false",
+        "last_four": "1111111111",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Cruise Duration",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "How many days is your cruise?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "eightyfive"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cruise_duration": 85,
+        "domestic_coverage": "false",
+        "last_four": "1111111111",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Cruise Package Info",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, let me pull up the available cruise packages for 85 days." ]
+      }, {
+        "text": [ "You can choose one of 2 available plans:" ]
+      }, {
+        "text": [ "Option 1 includes talk and text. It costs $[XX]/day. More info here [URL]." ]
+      }, {
+        "text": [ "Option 2 includes talk, text and data. It costs $[XX]/day. More info here [URL]." ]
+      }, {
+        "text": [ "Which cruise plan would you like to add?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "so sms is included?"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cruise_duration": 85,
+        "domestic_coverage": "false",
+        "last_four": "1111111111",
+        "phone_line_verified": "true"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.includes_sms"
+      },
+      "currentPage": {
+        "name": "Cruise Package Info",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Both SMS and MMS are included." ]
+      }, {
+        "text": [ "Which cruise plan would you like to add?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "any cheaper options than that"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cruise_duration": 85,
+        "domestic_coverage": "false",
+        "last_four": "1111111111",
+        "phone_line_verified": "true"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.cheaper_plan_options"
+      },
+      "currentPage": {
+        "name": "Cruise Package Info",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "The cheapest cruise package is Option 1, which has a one-time charge of only $X. To add it, you can simply say \"Option 1\" or even \"the 50 dollar one.\"" ]
+      }, {
+        "text": [ "Which cruise plan would you like to add?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "alright I take the first then"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cruise_duration": 85,
+        "cruise_plan": "Option 1",
+        "domestic_coverage": "false",
+        "last_four": "1111111111",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Port",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. " ]
+      }, {
+        "text": [ "I've added that plan to your account." ]
+      }, {
+        "text": [ "While on your cruise, you may need coverage on land." ]
+      }, {
+        "text": [ "May I ask you which port you will be stopping at?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "bahamas"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "cruise_duration": 85,
+        "cruise_plan": "Option 1",
+        "destination": "The Bahamas",
+        "domestic_coverage": "false",
+        "last_four": "1111111111",
+        "phone_line_verified": "true"
+      },
+      "currentPage": {
+        "name": "Collect Port",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "And, how many days are you spending there?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "3"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "coverage": "neither",
+        "cruise_duration": 85,
+        "cruise_plan": "Option 1",
+        "daily_cost": 30,
+        "destination": "The Bahamas",
+        "domestic_coverage": "false",
+        "last_four": "1111111111",
+        "monthly_cost": 0,
+        "phone_line_verified": "true",
+        "port_is_covered": "false",
+        "suggested_plan": "daily",
+        "trip_duration": 3
+      },
+      "currentPage": {
+        "name": "Add Pay Per Use",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "For this destination and duration, you will pay per use. You do not need to add any plan to your line. You will be charged only for the data and minutes you use." ]
+      }, {
+        "text": [ "Would you like to hear more about these rates?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "sure"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "coverage": "neither",
+        "cruise_duration": 85,
+        "cruise_plan": "Option 1",
+        "daily_cost": 30,
+        "destination": "The Bahamas",
+        "domestic_coverage": "false",
+        "last_four": "1111111111",
+        "monthly_cost": 0,
+        "phone_line_verified": "true",
+        "port_is_covered": "false",
+        "suggested_plan": "daily",
+        "trip_duration": 3
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, the rates are as follows:" ]
+      }, {
+        "text": [ "Inbound and outbound calls are each $[X.XX]" ]
+      }, {
+        "text": [ "SMS and MMS are $[X.XX]" ]
+      }, {
+        "text": [ "Each GB of data used is $[X.XX]" ]
+      }, {
+        "text": [ "Did you have any other questions?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "nope that's all thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "coverage": "neither",
+        "cruise_duration": 85,
+        "cruise_plan": "Option 1",
+        "daily_cost": 30,
+        "destination": "The Bahamas",
+        "domestic_coverage": "false",
+        "last_four": "1111111111",
+        "monthly_cost": 0,
+        "phone_line_verified": "true",
+        "port_is_covered": "false",
+        "suggested_plan": "daily",
+        "trip_duration": 3
+      },
+      "triggeredIntent": {
+        "name": "small_talk.thanks"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Travel/Cruise Plan Options"
+      },
+      "textResponses": [ {
+        "text": [ "You're welcome! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel/Cruise Plan Options"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607016430,
+    "nanos": 905058000
+  }
+}

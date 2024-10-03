@@ -1,0 +1,53 @@
+{
+  "name": "c4200e53-19a6-4093-ba20-f6402f209cb0",
+  "displayName": "Suggest Alt Discount Plans",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "We have another monthly plan option. It reduces your bill by $XX per month. Would you like to add this to your account?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Plan Added",
+    "name": "e4e8624e-aef1-4dc1-b87f-e1d2360dd861"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Alright, I will not add any plans to your account." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "5ed54c26-f9eb-41a3-8997-46fbf861aa5e"
+  }, {
+    "intent": "bill_reduction.other_options",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "These are the only options based on your account details." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "ac7b413a-b738-4817-aa6f-435f0cf01683"
+  }, {
+    "intent": "bill_reduction.cheaper_plan_options",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Suggest Discount Plans",
+    "name": "1b7380a2-0cc3-4d5d-b522-143784a234b3"
+  } ]
+}

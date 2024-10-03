@@ -1,0 +1,47 @@
+{
+  "name": "8af7eec9-15bf-4afa-bcd8-378f1788c0ab",
+  "displayName": "Power Outage - Yes",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "troubleshoot.outage_timeline",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Our current estimate is that service should be working again in 1-2 hours. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "6702aec3-64a8-4287-b672-4dc3dc2c2ba0"
+  }, {
+    "condition": "$session.params.outage_issue = \"true\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "We are actively working on restoring power in your area and you will be notified when service is back on. Our current estimate is that service should be working again in 1-2 hrs. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "ea744233-5aca-4f62-88e6-6dcb9b2f51c0"
+  }, {
+    "condition": "$session.params.outage_issue != \"true\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "It appears as though there’s an outage in your area. We are actively working on it and you will be notified when service is back on.  Can I help you with anything else?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5c6ff3a8-1d46-489a-ab1c-bf2d96d89f5d"
+  } ],
+  "transitionRouteGroups": [ "Bill Reduction", "Plan Questions", "General FAQ", "Troubleshoot" ]
+}

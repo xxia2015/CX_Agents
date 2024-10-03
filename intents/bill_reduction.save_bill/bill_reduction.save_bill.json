@@ -1,0 +1,10 @@
+{
+  "name": "a66d3a5f-8979-4b08-96e2-8b822a09b9f0",
+  "displayName": "bill_reduction.save_bill",
+  "parameters": [ {
+    "id": "discount",
+    "entityType": "@discount"
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 42
+}

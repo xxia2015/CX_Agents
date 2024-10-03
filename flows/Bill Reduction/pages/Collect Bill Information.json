@@ -1,0 +1,108 @@
+{
+  "name": "6de33536-578b-4639-a092-b273578e3755",
+  "displayName": "Collect Bill Information",
+  "form": {
+    "parameters": [ {
+      "displayName": "phone_number",
+      "required": true,
+      "entityType": "@sys.phone-number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Let me take a look for you. What is your phone number with us?" ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn't get that. Could you please enter a valid phone number?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "e7859099-8488-44a2-951b-e2cd4f785881"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am sorry. I don't understand. Please provide a valid phone number" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "54c6cd60-124c-4f49-b56d-10893e6fe355"
+        } ]
+      }
+    }, {
+      "displayName": "product_line",
+      "entityType": "@product-line",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    }, {
+      "displayName": "bill_state",
+      "required": true,
+      "entityType": "@bill-state",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "To confirm, would you like to discuss your current bill or a previous bill?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    }, {
+      "displayName": "bill_amount",
+      "entityType": "@sys.unit-currency",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    }, {
+      "displayName": "anomaly_detect",
+      "entityType": "@sys.any",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.discount != \"discount\" AND $page.params.status = \"FINAL\" AND $session.params.save_bill != \"true\"",
+    "triggerFulfillment": {
+      "webhook": "cxPrebuiltAgentsTelecom",
+      "tag": "detectCustomerAnomaly"
+    },
+    "targetPage": "Anomaly Detection",
+    "name": "3e2cca7f-4c7b-4ef9-8244-6719cee88736"
+  }, {
+    "condition": "$session.params.discount = \"discount\" AND ($session.params.phone_number \u003e 0 OR $page.params.phone_number.status = \"UPDATED\") AND $session.params.save_bill = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Suggest Discount Plans",
+    "name": "0b0606d8-d490-487b-a21b-477a6f238d18"
+  }, {
+    "condition": "$session.params.discount != \"discount\" AND ($session.params.phone_number \u003e 0 OR $page.params.phone_number.status = \"UPDATED\") AND $session.params.save_bill = \"true\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Check Bill Saver",
+    "name": "38b00cf3-d806-4165-be57-467b93f49945"
+  } ]
+}

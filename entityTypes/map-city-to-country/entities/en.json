@@ -1,0 +1,91 @@
+{
+  "entities": [ {
+    "value": "India",
+    "synonyms": [ "India", "Mumbai", "Dehli", "Agra" ],
+    "languageCode": "en"
+  }, {
+    "value": "France",
+    "synonyms": [ "France", "Paris" ],
+    "languageCode": "en"
+  }, {
+    "value": "Japan",
+    "synonyms": [ "Japan", "Tokyo", "Osaka" ],
+    "languageCode": "en"
+  }, {
+    "value": "Canada",
+    "synonyms": [ "Canada", "Quebec", "Montreal", "Toronto", "Vancouver" ],
+    "languageCode": "en"
+  }, {
+    "value": "England",
+    "synonyms": [ "England", "London", "Manchester", "Liverpool", "UK" ],
+    "languageCode": "en"
+  }, {
+    "value": "Brazil",
+    "synonyms": [ "Brazil", "Rio de Janeiro" ],
+    "languageCode": "en"
+  }, {
+    "value": "Russia",
+    "synonyms": [ "Russia", "Moscow" ],
+    "languageCode": "en"
+  }, {
+    "value": "Phillipines",
+    "synonyms": [ "Phillipines", "Manila" ],
+    "languageCode": "en"
+  }, {
+    "value": "Egypt",
+    "synonyms": [ "Egypt", "Cairo" ],
+    "languageCode": "en"
+  }, {
+    "value": "The Bahamas",
+    "synonyms": [ "The Bahamas", "bahamas", "the bahamas" ],
+    "languageCode": "en"
+  }, {
+    "value": "Mexico",
+    "synonyms": [ "Mexico", "Cancun", "Tijuana", "Puerto Vallarta", "Puerta Penasco", "Cozumel" ],
+    "languageCode": "en"
+  }, {
+    "value": "Italy",
+    "synonyms": [ "Italy", "Rome", "Florence" ],
+    "languageCode": "en"
+  }, {
+    "value": "Spain",
+    "synonyms": [ "Spain", "Barcelona", "Madrid" ],
+    "languageCode": "en"
+  }, {
+    "value": "China",
+    "synonyms": [ "China", "Shanghai", "Guangzhou", "Shenzhen" ],
+    "languageCode": "en"
+  }, {
+    "value": "Thailand",
+    "synonyms": [ "Thailand", "Pattaya", "Phuket", "Bangkok" ],
+    "languageCode": "en"
+  }, {
+    "value": "South Korea",
+    "synonyms": [ "South Korea", "Seoul" ],
+    "languageCode": "en"
+  }, {
+    "value": "Saudi Arabia",
+    "synonyms": [ "Saudi Arabia", "Mecca" ],
+    "languageCode": "en"
+  }, {
+    "value": "Czech Republic",
+    "synonyms": [ "Czech Republic", "Prague" ],
+    "languageCode": "en"
+  }, {
+    "value": "Taiwan",
+    "synonyms": [ "Taiwan", "Taipei" ],
+    "languageCode": "en"
+  }, {
+    "value": "Turkey",
+    "synonyms": [ "Turkey", "Antalya", "Istanbul" ],
+    "languageCode": "en"
+  }, {
+    "value": "Malaysia",
+    "synonyms": [ "Malaysia", "Kuala Lumpur" ],
+    "languageCode": "en"
+  }, {
+    "value": "Chile",
+    "synonyms": [ "Chile", "Santiago" ],
+    "languageCode": "en"
+  } ]
+}

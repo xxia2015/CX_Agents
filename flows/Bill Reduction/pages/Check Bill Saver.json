@@ -1,0 +1,85 @@
+{
+  "name": "08da66a9-535d-47d1-8180-404e8a0e6301",
+  "displayName": "Check Bill Saver",
+  "form": {
+    "parameters": [ {
+      "displayName": "save_bill_option",
+      "required": true,
+      "entityType": "@plan-options",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Which option would you like to pursue?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Sure. We have two options for you." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Option 1: we can disconnect device protection, which was automatically added to your plan at account creation." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Option 2: we can switch you over to the cheapest available plan so that your bill will be reduced by $XX per month." ]
+      },
+      "languageCode": "en"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "bill_without_purchase",
+      "value": "54.34"
+    }, {
+      "parameter": "currency",
+      "value": "USD"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "5b6a0241-6f7a-4a0d-8276-70e4cf1fa222"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "33c5dadf-e233-413e-8821-d15437570c70"
+  }, {
+    "condition": "$session.params.save_bill_option = \"Option 1\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Reprompt Service Cancellation",
+    "name": "3274ad4d-45af-422d-997c-e75f92ca3d72"
+  }, {
+    "condition": "$session.params.save_bill_option = \"Option 2\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Reprompt Discount Plan",
+    "name": "feca2cba-41f4-4766-abe3-9ae9c60fedec"
+  } ]
+}

@@ -1,0 +1,60 @@
+{
+  "name": "18af7ef2-6fd3-4e8c-bb80-af4732e94b41",
+  "displayName": "Monthly Plan",
+  "transitionRoutes": [ {
+    "intent": "phone_plan.activation_fee",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "There is no activation charge for this plan. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be76-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.includes_sms",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "For this plan, both SMS and MMS are included. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be77-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.covers_all_lines",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "The plan is added on a per-line basis. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be78-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.plan_cancel",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Your international plan will cancel automatically once you return." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be79-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.includes_mms",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "For this plan, both SMS and MMS are included. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be7a-0000-210f-859a-f403043d09f0"
+  } ]
+}

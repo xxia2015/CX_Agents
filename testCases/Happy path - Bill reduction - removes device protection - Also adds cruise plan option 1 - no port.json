@@ -1,0 +1,392 @@
+{
+  "name": "55f5fb44-093c-4356-bfb7-9bbb9f75729e",
+  "tags": [ "#cancel_device_protection_yes", "#cruise_option_1" ],
+  "displayName": "Happy path - Bill reduction - removes device protection - Also adds cruise plan option 1 - no port",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "looking for ways to save money on my bill"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "save_bill": "true"
+      },
+      "triggeredIntent": {
+        "name": "bill_reduction.save_bill"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "2222222222"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "phone_number": "2222222222",
+        "save_bill": "true"
+      },
+      "currentPage": {
+        "name": "Check Bill Saver",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Sure. We have two options for you. " ]
+      }, {
+        "text": [ "Option 1 where we can disconnect device protection, which was added to your plan when signing on. " ]
+      }, {
+        "text": [ "Option 2  would be to add the cheapest available plan so that your bill will be reduced by $XX per month. " ]
+      }, {
+        "text": [ "Which option would you like to pursue?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "option 1"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "phone_number": "2222222222",
+        "save_bill": "true",
+        "save_bill_option": "Option 1"
+      },
+      "currentPage": {
+        "name": "Reprompt Service Cancellation",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "You wish to cancel the device protection that your plan uses.\nCan you confirm again?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "this is a monthly recurring fee right"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "payment_type": [ "recurring" ],
+        "phone_number": "2222222222",
+        "save_bill": "true",
+        "save_bill_option": "Option 1"
+      },
+      "triggeredIntent": {
+        "name": "bill_reduction.paymentcharge_type"
+      },
+      "currentPage": {
+        "name": "Reprompt Service Cancellation",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Your purchase of device protection is a recurring charge. Would you like to stop using that to reduce the amount?\nI’m happy to help if you have any other questions. " ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yes"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "discount": "false",
+        "payment_type": [ "recurring" ],
+        "phone_number": "2222222222",
+        "save_bill": "true",
+        "save_bill_option": "Option 1"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Ok, your new bill will be $54.34 starting next month. " ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "book a cruise plan please"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "discount": "false",
+        "domestic_coverage": "false",
+        "payment_type": [ "recurring" ],
+        "phone_line_verified": "true",
+        "phone_number": "2222222222",
+        "save_bill": "true",
+        "save_bill_option": "Option 1"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.cruise_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Cruise Duration",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "How many days is your cruise?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "5"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "cruise_duration": 5,
+        "currency": "USD",
+        "discount": "false",
+        "domestic_coverage": "false",
+        "payment_type": [ "recurring" ],
+        "phone_line_verified": "true",
+        "phone_number": "2222222222",
+        "save_bill": "true",
+        "save_bill_option": "Option 1"
+      },
+      "currentPage": {
+        "name": "Cruise Package Info",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, let me pull up the available cruise packages for 5 days." ]
+      }, {
+        "text": [ "You can choose one of 2 available plans:" ]
+      }, {
+        "text": [ "Option 1 includes talk and text. It costs $[XX]/day. More info here [URL]." ]
+      }, {
+        "text": [ "Option 2 includes talk, text and data. It costs $[XX]/day. More info here [URL]." ]
+      }, {
+        "text": [ "Which cruise plan would you like to add?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "cruise_duration": 5,
+        "cruise_plan": "Option 1",
+        "currency": "USD",
+        "discount": "false",
+        "domestic_coverage": "false",
+        "payment_type": [ "recurring" ],
+        "phone_line_verified": "true",
+        "phone_number": "2222222222",
+        "save_bill": "true",
+        "save_bill_option": "Option 1"
+      },
+      "currentPage": {
+        "name": "Collect Port",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. " ]
+      }, {
+        "text": [ "I've added that plan to your account." ]
+      }, {
+        "text": [ "While on your cruise, you may also need coverage on land." ]
+      }, {
+        "text": [ "What port will you be stopping at?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no port stopping"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "cruise_duration": 5,
+        "cruise_plan": "Option 1",
+        "currency": "USD",
+        "discount": "false",
+        "domestic_coverage": "false",
+        "payment_type": [ "recurring" ],
+        "phone_line_verified": "true",
+        "phone_number": "2222222222",
+        "save_bill": "true",
+        "save_bill_option": "Option 1"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "No problem, I will not add any international coverage plans. " ]
+      }, {
+        "text": [ "Is there anything else I can help you with today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "bill_without_purchase": "54.34",
+        "cruise_duration": 5,
+        "cruise_plan": "Option 1",
+        "currency": "USD",
+        "discount": "false",
+        "domestic_coverage": "false",
+        "payment_type": [ "recurring" ],
+        "phone_line_verified": "true",
+        "phone_number": "2222222222",
+        "save_bill": "true",
+        "save_bill_option": "Option 1"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Thanks for being a loyal customer! Have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "small_talk.thanks"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "You're very welcome!" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607571254,
+    "nanos": 594457000
+  }
+}

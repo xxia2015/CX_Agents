@@ -1,0 +1,23 @@
+{
+  "name": "f299e13b-21a8-4832-8370-86e8b8562267",
+  "displayName": "No Service Cancellation",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Ok. I will not cancel your $session.params.purchase at this point. Your total monthly bill will continue to stay at $$session.params.total_bill." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Anything else?",
+    "name": "15d9b59b-c813-40e6-83f8-cf3cab3952ee"
+  } ]
+}

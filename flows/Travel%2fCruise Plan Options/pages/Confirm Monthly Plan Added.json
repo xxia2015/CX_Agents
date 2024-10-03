@@ -1,0 +1,23 @@
+{
+  "name": "266e7415-5410-4944-8e37-f8702e116a7f",
+  "displayName": "Confirm Monthly Plan Added",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Great! This plan has been added to your account." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Anything else?",
+    "name": "5f36be61-0000-210f-859a-f403043d09f0"
+  } ]
+}

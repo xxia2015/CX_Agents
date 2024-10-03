@@ -1,0 +1,224 @@
+{
+  "name": "efdc703c-9a5f-4954-8e7b-2cd7ecc6adb8",
+  "tags": [ "#data_option_1" ],
+  "displayName": "Happy path - Plans - Data - option 1 - asks about activation fee",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "question about plans"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "faq.plan_questions"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "You can upgrade your plan by adding a new line, increasing your data limits, or switching to unlimited data plans. What can I help you with today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "data upgrade"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "dataupgrade": "true",
+        "newline": "false",
+        "unlimited": "false"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.upgrade_data"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "4444444444"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "dataupgrade": "true",
+        "newline": "false",
+        "phone_number": "4444444444",
+        "unlimited": "false"
+      },
+      "currentPage": {
+        "name": "Data Usage Info",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, let me pull up the available data plans for you." ]
+      }, {
+        "text": [ "You can choose one of 2 available plans:" ]
+      }, {
+        "text": [ "Option 1 includes XX Internet service tier at $[XX] per month, for which you will receive a monthly plan that includes 1.2 TB of data." ]
+      }, {
+        "text": [ "Option 2  includes XX Internet service tier at $[XX] per month, for which you will receive a monthly plan that includes 2.4 TB of data." ]
+      }, {
+        "text": [ "Which data plan would you like to upgrade to?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "there is no activation fee right"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "dataupgrade": "true",
+        "newline": "false",
+        "phone_number": "4444444444",
+        "unlimited": "false"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.activation_fee"
+      },
+      "currentPage": {
+        "name": "Data Usage Info",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "There is no activation charge associated with this data plan upgrade." ]
+      }, {
+        "text": [ "Which data plan would you like to upgrade to?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "ok option 1 then"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "dataupgrade": "true",
+        "newline": "false",
+        "phone_number": "4444444444",
+        "unlimited": "false",
+        "upgrade_data": "Option 1"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "Got it. " ]
+      }, {
+        "text": [ "I've upgraded your data plan to XX. Your new bill will be $XX/month." ]
+      }, {
+        "text": [ "Is there anything else I can help you with today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "thanks!"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "dataupgrade": "true",
+        "newline": "false",
+        "phone_number": "4444444444",
+        "unlimited": "false",
+        "upgrade_data": "Option 1"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.thanks"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Plan Questions"
+      },
+      "textResponses": [ {
+        "text": [ "You’re welcome, have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Plan Questions"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "thank you"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "small_talk.thanks"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Of course!" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607568319,
+    "nanos": 256754000
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "name": "ff43eb25-b7c9-4ef0-9f85-e448b01756a7",
+  "displayName": "Plan Questions",
+  "transitionRoutes": [ {
+    "intent": "phone_plan.upgrade_data",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "dataupgrade",
+        "value": "true"
+      }, {
+        "parameter": "unlimited",
+        "value": "false"
+      }, {
+        "parameter": "newline",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Plan Questions",
+    "name": "ac0ac35f-0ac4-452d-a6cd-43f7008f0574"
+  }, {
+    "intent": "phone_plan.unlimited_plans",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "unlimited",
+        "value": "true"
+      }, {
+        "parameter": "dataupgrade",
+        "value": "false"
+      }, {
+        "parameter": "newline",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Plan Questions",
+    "name": "a8975470-a282-4abd-9e30-7a0dcfb11ca9"
+  }, {
+    "intent": "phone_plan.new_line_add",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "newline",
+        "value": "true"
+      }, {
+        "parameter": "dataupgrade",
+        "value": "false"
+      }, {
+        "parameter": "unlimited",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Plan Questions",
+    "name": "bda07064-f9a3-4d2a-a076-4ac009483848"
+  }, {
+    "intent": "faq.plan.current_plan",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "current_plan",
+        "value": "true"
+      } ]
+    },
+    "targetFlow": "Plan Questions",
+    "name": "1f12714c-b0b8-4092-a628-4ce819f659ca"
+  }, {
+    "intent": "phone_plan.general_plan_question",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure, I can help you modify your existing plan. Would you like to upgrade your plan or add an unlimited plan?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "00b5abdf-3d4c-404f-903d-2bf885d049dc"
+  } ]
+}

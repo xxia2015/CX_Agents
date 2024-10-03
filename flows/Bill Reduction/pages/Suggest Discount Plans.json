@@ -1,0 +1,48 @@
+{
+  "name": "9e29b5d0-6a80-42d0-b814-47450c83c439",
+  "displayName": "Suggest Discount Plans",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "The cheapest available plan for you is the #### plan. If you choose this plan, your bill will be reduced by $XX per month. Would you like to add this to your account?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Plan Added",
+    "name": "eae6e44c-52ff-417c-89dc-581b464d2af4"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Suggest Alt Discount Plans",
+    "name": "9c4865de-edcf-40f9-b2f5-5dea460e9665"
+  }, {
+    "intent": "bill_reduction.cheaper_plan_options",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "This is the cheapest option given your account details and spendings. Would you like to add this to your account?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "41432bf2-14ed-4d4b-83de-fc2870289607"
+  }, {
+    "intent": "bill_reduction.other_options",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Suggest Alt Discount Plans",
+    "name": "ddc26897-0f88-497b-923e-085261a6d010"
+  } ]
+}

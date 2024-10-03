@@ -1,0 +1,58 @@
+{
+  "name": "6d1b3151-5eca-4588-9163-2e7657a2c8e2",
+  "displayName": "Add Daily Plan",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "The cheapest available plan for you is the daily plan. The cost is $X per day." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Daily Plan Added",
+    "name": "5f36be68-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Alright, no plans have been added to your account." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "5f36be69-0000-210f-859a-f403043d09f0"
+  }, {
+    "intent": "phone_plan.cheaper_plan_options",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "This is the cheapest option for you, given your destination." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be6a-0000-210f-859a-f403043d09f0"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Would you like to add this plan?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "5f36be6b-0000-210f-859a-f403043d09f0"
+  } ],
+  "transitionRouteGroups": [ "Monthly Plan" ]
+}

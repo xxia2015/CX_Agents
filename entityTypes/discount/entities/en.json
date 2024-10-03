@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "discount",
+    "synonyms": [ "discount", "promotions", "promotional", "offer", "offers", "deal", "deals" ],
+    "languageCode": "en"
+  } ]
+}

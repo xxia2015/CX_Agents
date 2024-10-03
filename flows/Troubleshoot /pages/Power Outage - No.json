@@ -1,0 +1,35 @@
+{
+  "name": "2c476aca-c301-45f2-af5d-c1f0506bd8f8",
+  "displayName": "Power Outage - No",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Looks like there are no outages in the area. I can help with restarting your router. Do you want to give it a try?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Router Reset",
+    "name": "8d473778-d78b-4a5d-a4b9-bd7658232b27"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "e0947fbf-b190-4377-95b8-ec0aa9cd3846"
+  } ]
+}

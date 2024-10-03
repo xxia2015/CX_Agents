@@ -1,0 +1,40 @@
+{
+  "name": "c387a625-e2e7-40a8-8676-a4f22b99dd35",
+  "displayName": "Router Reset",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Please find your router and press the restart button for at least 20 seconds. You will lose your connection completely for a few minutes, but it should reset connectivity once it's been restarted. Did that resolve the issue?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Perfect, I’m glad I could help. " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "f07e75d5-31bb-4df9-9216-9c402428c3e3"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Okay, seems like there is a problem with your router placement. Do you want me to suggest an optimal place?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Router Placement",
+    "name": "96c8f06b-e424-421b-976b-88b728283c24"
+  } ]
+}

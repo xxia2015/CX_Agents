@@ -1,0 +1,35 @@
+{
+  "name": "0a9559fe-31ed-4a81-82b4-10f07d090a06",
+  "tags": [ "#nlu_cruise_plan" ],
+  "displayName": "NLU - \"going on a disney cruise\"",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "going on a disney cruise"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "phone_plan.cruise_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Cruise Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Can I get the last four digits of the phone line you'll be taking with you?" ]
+      } ],
+      "currentFlow": {
+        "name": "Cruise Plan"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606688069,
+    "nanos": 226144000
+  }
+}

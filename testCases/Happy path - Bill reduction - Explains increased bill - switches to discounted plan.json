@@ -1,0 +1,287 @@
+{
+  "name": "d3dfb153-cf19-480a-80e8-3b26f6f17255",
+  "tags": [ "#adds_discounted_plan" ],
+  "displayName": "Happy path - Bill reduction - Explains increased bill - switches to discounted plan",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "hi"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "Default Welcome Intent"
+      },
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Hi! I'm the virtual telecommunications agent. I can help you resolve billing and plan questions, troubleshoot, and add travel and cruise plans. How can I assist you today?" ]
+      } ],
+      "currentFlow": {
+        "name": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "my bill last month was way too high"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "discount": "false",
+        "save_bill": "false"
+      },
+      "triggeredIntent": {
+        "name": "bill_reduction.initiate"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Let me take a look for you. What is your phone number with us?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "1111111111"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "discount": "false",
+        "phone_number": "1111111111",
+        "save_bill": "false"
+      },
+      "currentPage": {
+        "name": "Collect Bill Information",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "To confirm, would you like to discuss your current bill or a previous bill?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "previous"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "previous",
+        "bill_without_purchase": 54.340000000000003,
+        "discount": "false",
+        "first_month": "November 01, 2020",
+        "phone_number": "1111111111",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "false",
+        "total_bill": 64.329999999999998
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Ok, your previous bill.\nI can check your bill to see what might have caused the discrepancy.\nOn November 01, 2020, it looks like \"The Godfather\" was purchased for a sum of $9.99." ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "I see. is there a way to reduce my bill somehow"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "previous",
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "discount": "false",
+        "first_month": "November 01, 2020",
+        "phone_number": "1111111111",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "true",
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "bill_reduction.save_bill"
+      },
+      "currentPage": {
+        "name": "Check Bill Saver",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Sure. We have two options for you." ]
+      }, {
+        "text": [ "Option 1: we can disconnect device protection, which was automatically added to your plan at account creation." ]
+      }, {
+        "text": [ "Option 2: we can switch you over to the cheapest available plan so that your bill will be reduced by $XX per month." ]
+      }, {
+        "text": [ "Which option would you like to pursue?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "ok i'll go for the second option then"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "previous",
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "discount": "false",
+        "first_month": "November 01, 2020",
+        "phone_number": "1111111111",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "true",
+        "save_bill_option": "Option 2",
+        "total_bill": 64.329999999999998
+      },
+      "currentPage": {
+        "name": "Reprompt Discount Plan",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "You would like to switch to the cheaper plan. Is that correct?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "yeah"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "previous",
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "discount": "false",
+        "first_month": "November 01, 2020",
+        "phone_number": "1111111111",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "true",
+        "save_bill_option": "Option 2",
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything else?",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Great! I changed your plan so your new bill will be $XX starting next month." ]
+      }, {
+        "text": [ "Is there anything else I can help you with?" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "anomaly_detect": "false",
+        "bill_state": "previous",
+        "bill_without_purchase": "54.34",
+        "currency": "USD",
+        "discount": "false",
+        "first_month": "November 01, 2020",
+        "phone_number": "1111111111",
+        "purchase": "The Godfather",
+        "purchase_amount": 9.9900000000000002,
+        "save_bill": "true",
+        "save_bill_option": "Option 2",
+        "total_bill": 64.329999999999998
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "End Session",
+        "flow": "Bill Reduction"
+      },
+      "textResponses": [ {
+        "text": [ "Okay, have a great day!" ]
+      } ],
+      "currentFlow": {
+        "name": "Bill Reduction"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1607624208,
+    "nanos": 85903000
+  }
+}

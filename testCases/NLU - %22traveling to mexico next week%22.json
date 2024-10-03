@@ -1,0 +1,40 @@
+{
+  "name": "91e03d1b-4cd6-402c-92d3-6758af4a6513",
+  "tags": [ "#nlu_travel_plan" ],
+  "displayName": "NLU - \"traveling to mexico next week\"",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "traveling to mexico next week"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "destination": "Mexico"
+      },
+      "triggeredIntent": {
+        "name": "phone_plan.travel_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+      }, {
+        "text": [ "Can I get the last four digits of the phone line you'll be taking with you?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606688113,
+    "nanos": 376670000
+  }
+}

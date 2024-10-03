@@ -1,0 +1,47 @@
+{
+  "name": "81cc6a82-849e-4604-8749-24be643f97e3",
+  "displayName": "Bill Reduction",
+  "transitionRoutes": [ {
+    "intent": "bill_reduction.initiate",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "discount",
+        "value": "false"
+      }, {
+        "parameter": "save_bill",
+        "value": "false"
+      } ]
+    },
+    "targetFlow": "Bill Reduction",
+    "name": "9905ebf0-8818-4a89-a4ef-b49b0d7497d9"
+  }, {
+    "intent": "bill_reduction.save_bill",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Bill Reduction",
+    "name": "901feb3c-ae0d-4374-86fa-2175bdd41790"
+  }, {
+    "intent": "faq.bill_reduction.bill_type",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I can help you investigate discrepancies in your current and previous TV, internet, and phone bills." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "7f005612-2a2c-4980-b27e-6d3bcb3a1452"
+  }, {
+    "intent": "faq.bill_reduction.current_bill",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Your current charges include XXXXXXX." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "c575ae56-151c-4fb3-af98-3abe399e6e65"
+  } ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "5f3bc617-2ef0-4c96-8167-825aacef01b3",
+  "tags": [ "#nlu_travel_plan" ],
+  "displayName": "NLU  - \"can you help me with getting a plan for travel\"",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "can you help me with getting a plan for travel"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "triggeredIntent": {
+        "name": "phone_plan.travel_plan_add"
+      },
+      "currentPage": {
+        "name": "Collect Customer Line",
+        "flow": "Travel Plan"
+      },
+      "textResponses": [ {
+        "text": [ "Alright, I can definitely help you choose and add an international plan." ]
+      }, {
+        "text": [ "Can I get the last four digits of the phone line you'll be taking with you?" ]
+      } ],
+      "currentFlow": {
+        "name": "Travel Plan"
+      }
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1606688154,
+    "nanos": 504519000
+  }
+}

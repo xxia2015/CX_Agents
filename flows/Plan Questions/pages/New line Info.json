@@ -1,0 +1,46 @@
+{
+  "name": "e1a2b0dc-0ae3-432c-ace1-051160ac3377",
+  "displayName": "New line Info",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Got it. If I were to add another line to your plan with all of the same access and limits, your total cost would come out to $100 plus tax. This is a $15 increase. Would you like to add that line?" ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "phone_plan.charge_type",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "The $15 increase is a monthly charge. Would you like to add that line?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "b2d13d26-df5e-4eb2-bb43-db488a29e5f0"
+  }, {
+    "intent": "small_talk.confirmation.yes",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm New Line Addition",
+    "name": "22b3259b-fcdf-40f1-87c6-fa708ed1301a"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sure thing!" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "7a2126c4-8a52-4799-9e4b-e8f199b7820e"
+  } ]
+}

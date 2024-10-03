@@ -1,0 +1,52 @@
+{
+  "name": "919b44d2-8e41-4eda-871e-f568dce1e11c",
+  "displayName": "Collect Phone Number",
+  "form": {
+    "parameters": [ {
+      "displayName": "phone_number",
+      "required": true,
+      "entityType": "@sys.phone-number",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Sure, I can help you change the password. Can you please tell me your subscribed phone number?" ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn't get that. Could you please enter a valid phone number?" ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "97cc9ee2-a823-48b8-8dfa-f8327bbb6240"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I am sorry. I don't understand.  Please provide a valid phone number." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "452ce712-a34e-4fd9-a8fa-7ddeafad679e"
+        } ]
+      }
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = \"FINAL\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Password Change",
+    "name": "3749877b-eb14-4d3c-86ff-961fc6188318"
+  } ]
+}

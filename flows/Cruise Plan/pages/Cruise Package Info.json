@@ -1,0 +1,106 @@
+{
+  "name": "f6c87806-9d34-4495-b756-8a0edeec0b8f",
+  "displayName": "Cruise Package Info",
+  "form": {
+    "parameters": [ {
+      "displayName": "cruise_plan",
+      "required": true,
+      "entityType": "@plan-options",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Which cruise plan would you like to add?" ]
+            },
+            "languageCode": "en"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I didn't get that. To add one of the plans, you can say something like \"option 1\"." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "d8c12bbe-99c5-461f-8afa-687eab31bdba"
+        }, {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Sorry, I still didn't get that. Let me connect you to someone who can help." ]
+              },
+              "languageCode": "en"
+            } ]
+          },
+          "name": "db61772f-e888-4b27-8cea-f6e0e574381c"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "You can choose one of 2 available plans:" ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Option 1 includes talk and text. It costs $[XX]/day. More info here [URL]." ]
+      },
+      "languageCode": "en"
+    }, {
+      "text": {
+        "text": [ "Option 2 includes talk, text and data. It costs $[XX]/day. More info here [URL]." ]
+      },
+      "languageCode": "en"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "small_talk.wait",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Got it. I will not add any cruise plans to your account." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "dce45315-01e9-49a9-b432-706c2c341585"
+  }, {
+    "intent": "small_talk.confirmation.no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Got it. I will not add any cruise plans to your account." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "targetPage": "Anything else?",
+    "name": "3d95e91e-0a53-4e3e-8caa-a0384082ce0f"
+  }, {
+    "intent": "phone_plan.cheaper_plan_options",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "The cheapest cruise package is Option 1, which has a one-time charge of only $X. To add it, you can simply say \"Option 1\" or even \"the 50 dollar one.\"" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "cd82654d-094f-42ee-bdef-888f13ad3204"
+  }, {
+    "condition": "$session.params.cruise_plan = \"Option 1\" OR $session.params.cruise_plan = \"Option 2\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Confirm Cruise Plan",
+    "name": "74496328-319b-44ee-9077-b2f600c7bb26"
+  } ],
+  "transitionRouteGroups": [ "Cruise Supplementals" ]
+}

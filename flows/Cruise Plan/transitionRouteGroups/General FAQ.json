@@ -1,0 +1,26 @@
+{
+  "name": "307a1206-03ff-46cc-aae3-4c31fec7e2cf",
+  "displayName": "General FAQ",
+  "transitionRoutes": [ {
+    "intent": "faq.bill_reduction.bill_type",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "6895cc18-da6c-43b5-bf9f-aa70dfdf42e2"
+  }, {
+    "intent": "faq.support_bot",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "4e742386-6b55-46d6-97df-7650514064ed"
+  }, {
+    "intent": "faq.troubleshoot.service_type",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "2a6686a3-9ceb-499e-bcd5-e4a66c2244db"
+  } ]
+}
